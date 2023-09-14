@@ -1,8 +1,10 @@
 'use client'
-import Menu from '@/Components/Menu'
+
 import './globals.css'
 import { Inter } from 'next/font/google'
-import Footer from '@/Components/Footer'
+
+import Menu from './Components/Menu'
+import Footer from './Components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 

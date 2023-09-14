@@ -1,8 +1,14 @@
+.box{
+  margin: 50px 25px 50px 25px;
+}
+
 .col {
     background-color: #333;
     border: 1px solid #333;
     border-radius: 5px;
     margin: 5px;
+    width: 200px;
+    height: 75px;
     transition: transform 0.3s ease;
   }
   

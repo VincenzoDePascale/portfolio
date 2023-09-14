@@ -1,9 +1,10 @@
 'use client'
-import Menu from "@/Components/Menu";
-import Footer from "@/Components/Footer";
+import "./page.css"
 
-export default function Bio() {
+export default function AboutMe() {
     return(<>
-    <div>About me</div>
+    <div className="box">
+    <div className="text-white">About me</div>
+    </div>
     </>)
 }
