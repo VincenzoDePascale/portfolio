@@ -3,11 +3,11 @@ import "./page.css"
 export default function Contacts() {
     return (
       <>
-        <div className=" box text-white py-8">
+        <div className="text-white py-8">
           <div className="container mx-auto">
             <h2 className="text-2xl font-semibold mb-4">Contatti Utili</h2>
   
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="max-w-[450px]">
   
             <a
             href="mailto:vincenzodepascale0@gmail.com"
@@ -21,7 +21,7 @@ export default function Contacts() {
             </svg>
                 </span>
             </div>
-            <div className="ml-4">
+            <div className="ml-4 truncate ...">
                 <h3 className="text-lg font-semibold mb-2">Email:</h3>
                 <p>vincenzodepascale0@gmail.com</p>
             </div>
@@ -50,7 +50,7 @@ export default function Contacts() {
                 </svg>
                 </span>
             </div>
-            <div className="ml-4">
+            <div className="ml-4 truncate ...">
                 <h3 className="text-lg font-semibold mb-2">Linkedin:</h3>
                 <p>Vincenzo De Pascale</p>
             </div>
@@ -78,7 +78,7 @@ export default function Contacts() {
                 </svg>
                 </span>
             </div>
-            <div className="ml-4">
+            <div className="ml-4 truncate ...">
                 <h3 className="text-lg font-semibold mb-2">GitHub:</h3>
                 <p>Vincenzo De Pascale</p>
             </div>
@@ -103,7 +103,7 @@ export default function Contacts() {
                 </svg>
                 </span>
             </div>
-            <div className="ml-4">
+            <div className="ml-4 truncate ...">
                 <h3 className="text-lg font-semibold mb-2">Residenza:</h3>
                 <p>Pagani (SA)</p>
             </div>
