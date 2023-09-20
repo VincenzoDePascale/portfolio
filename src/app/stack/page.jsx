@@ -1,6 +1,92 @@
 'use client'
 import "./page.css"
 
+export const frontEndList = [
+    {
+        id: "HTML5",
+        stack: "HTML5"
+    },{
+        id: "CSS3",
+        stack: "CSS3"
+    },{
+        id: "SASS",
+        stack: "SASS"
+    },{
+        id: "BOOTSTRAP",
+        stack: "BOOTSTRAP"
+    },{
+        id: "TAILWIND",
+        stack: "TAILWIND"
+    },{
+        id: "JAVASCRIPT",
+        stack: "JAVASCRIPT"
+    },{
+        id: "TYPESCRIPT",
+        stack: "TYPESCRIPT"
+    },{
+        id: "REACT",
+        stack: "REACT"
+    },{
+        id: "REACT ROUTER",
+        stack: "REACT ROUTER"
+    },{
+        id: "REDUX",
+        stack: "REDUX"
+    },{
+        id: "NEXT.JS",
+        stack: "NEXT.JS"
+    }
+]
+
+export const backEndList = [
+    {
+        id: "JAVA",
+        stack: "JAVA",
+    },{
+        id: "SPRING",
+        stack: "SPRING",
+    },{
+        id: "SPRINGBOOT",
+        stack: "SPRINGBOOT",
+    },{
+        id: "THYMELEAF",
+        stack: "THYMELEAF",
+    },{
+        id: "APACHE MAVEN",
+        stack: "APACHE MAVEN",
+    }
+]
+
+export const sqlList = [
+    {
+        id: "POSTGRESQL",
+        stack: "POSTGRESQL",
+    }
+]
+
+export const toolList = [
+    {
+        id: "NPM",
+        stack: "NPM",
+    },{
+        id: "POSTMAN",
+        stack: "POSTMAN",
+    },{
+        id: "TRELLO",
+        stack: "TRELLO",
+    },{
+        id: "GIT",
+        stack: "GIT",
+    }
+]
+
+export const authList = [
+    {
+        id: "JWT",
+        stack: "JWT",
+    }
+]
+
 export default function Stack() {
   return (
     <>
@@ -10,39 +96,13 @@ export default function Stack() {
             <div className="container mx-auto text-center">
                 <h2 className="text-2xl font-semibold mb-4">Front End</h2>
                 <div className="flex flex-wrap justify-center">
-                    <div className="col py-4 rounded shadow flex justify-center items-center">
-                        <p className="text-center flex justify-center">HTML5</p>
+
+                    {frontEndList.map((e, i) => (
+                        <div key={i} className="col flex justify-center items-center">
+                        <p className="text-center flex justify-center">{e.stack}</p>
                     </div>
-                    <div className="col py-4 rounded shadow flex justify-center items-center">
-                        <p className="text-center flex justify-center">CSS3</p>
-                    </div>
-                    <div className="col py-4 rounded shadow flex justify-center items-center">
-                        <p className="text-center flex justify-center">SASS</p>
-                    </div>
-                    <div className="col py-4 rounded shadow flex justify-center items-center">
-                        <p className="text-center flex justify-center">BOOTSTRAP</p>
-                    </div>
-                    <div className="col py-4 rounded shadow flex justify-center items-center">
-                        <p className="text-center flex justify-center">TAILWIND</p>
-                    </div>
-                    <div className="col py-4 rounded shadow flex justify-center items-center">
-                        <p className="text-center flex justify-center">JAVASCRIPT</p>
-                    </div>
-                    <div className="col py-4 rounded shadow flex justify-center items-center">
-                        <p className="text-center flex justify-center">TYPESCRIPT</p>
-                    </div>
-                    <div className="col py-4 rounded shadow flex justify-center items-center">
-                        <p className="text-center flex justify-center">REACT</p>
-                    </div>
-                    <div className="col py-4 rounded shadow flex justify-center items-center">
-                        <p className="text-center flex justify-center">REACT ROUTER</p>
-                    </div>
-                    <div className="col py-4 rounded shadow flex justify-center items-center">
-                        <p className="text-center flex justify-center">REDUX</p>
-                    </div>
-                    <div className="col py-4 rounded shadow flex justify-center items-center">
-                        <p className="text-center flex justify-center">NEXT</p>
-                    </div>
+                    ))}
+                    
                 </div>
             </div>
         </div>
@@ -51,21 +111,13 @@ export default function Stack() {
             <div className="container mx-auto text-center">
                 <h2 className="text-2xl font-semibold mb-4">Back End</h2>
                 <div className="flex flex-wrap justify-center">
-                    <div className="col py-4 rounded shadow flex justify-center items-center">
-                        <p className="text-center flex justify-center">JAVA</p>
+
+                    {backEndList.map((e, i) => (
+                        <div key={i} className="col flex justify-center items-center">
+                        <p className="text-center flex justify-center">{e.stack}</p>
                     </div>
-                    <div className="col py-4 rounded shadow flex justify-center items-center">
-                        <p className="text-center flex justify-center">SPRING</p>
-                    </div>
-                    <div className="col py-4 rounded shadow flex justify-center items-center">
-                        <p className="text-center flex justify-center">SPRINGBOOT</p>
-                    </div>
-                    <div className="col py-4 rounded shadow flex justify-center items-center">
-                        <p className="text-center flex justify-center">THYMELEAF</p>
-                    </div>
-                    <div className="col py-4 rounded shadow flex justify-center items-center">
-                        <p className="text-center flex justify-center">APACHE MAVEN</p>
-                    </div>
+                    ))}
+                    
                 </div>
             </div>
         </div>
@@ -74,9 +126,13 @@ export default function Stack() {
             <div className="container mx-auto text-center">
                 <h2 className="text-2xl font-semibold mb-4">SQL</h2>
                 <div className="flex flex-wrap justify-center">
-                    <div className="col py-4 rounded shadow flex justify-center items-center">
-                        <p className="text-center flex justify-center">POSTGRESQL</p>
+
+                {sqlList.map((e, i) => (
+                        <div key={i} className="col flex justify-center items-center">
+                        <p className="text-center flex justify-center">{e.stack}</p>
                     </div>
+                    ))}
+
                 </div>
             </div>
         </div>
@@ -85,15 +141,13 @@ export default function Stack() {
             <div className="container mx-auto text-center">
                 <h2 className="text-2xl font-semibold mb-4">TOOL</h2>
                 <div className="flex flex-wrap justify-center">
-                    <div className="col py-4 rounded shadow flex justify-center items-center">
-                        <p className="text-center flex justify-center">NPM</p>
+
+                {toolList.map((e, i) => (
+                        <div key={i} className="col flex justify-center items-center">
+                        <p className="text-center flex justify-center">{e.stack}</p>
                     </div>
-                    <div className="col py-4 rounded shadow flex justify-center items-center">
-                        <p className="text-center flex justify-center">POSTMAN</p>
-                    </div>
-                    <div className="col py-4 rounded shadow flex justify-center items-center">
-                        <p className="text-center flex justify-center">TRELLO</p>
-                    </div>
+                    ))}
+
                 </div>
             </div>
         </div>
@@ -102,9 +156,13 @@ export default function Stack() {
             <div className="container mx-auto text-center">
                 <h2 className="text-2xl font-semibold mb-4">AUTENTICATION</h2>
                 <div className="flex flex-wrap justify-center">
-                    <div className="col py-4 rounded shadow flex justify-center items-center">
-                        <p className="text-center flex justify-center">JWT</p>
+                    
+                {authList.map((e, i) => (
+                        <div key={i} className="col flex justify-center items-center">
+                        <p className="text-center flex justify-center">{e.stack}</p>
                     </div>
+                    ))}
+
                 </div>
             </div>
         </div>
