@@ -1,0 +1,41 @@
+.title {
+  border-bottom: 2px solid #333;
+}
+
+.boxCard {
+  margin: 10px 0;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-position: center;
+}
+
+@-webkit-keyframes slideIn {
+  0% {
+    transform: translateY(-125px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@-moz-keyframes slideIn {
+  0% {
+    transform: translateY(-125px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slideIn {
+  0% {
+    transform: translateY(-125px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animation {
+  -webkit-animation: slideIn 2s forwards;
+  -moz-animation: slideIn 2s forwards;
+  animation: slideIn 2s forwards;
+}

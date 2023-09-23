@@ -4,15 +4,15 @@ import "./Menu.css";
 import { Navbar } from "flowbite-react";
 
 export const navLinks = [
-  {
-    id: "aboutMe",
-    title: "About Me",
-    href: "aboutMe",
-  },
+  // {
+  //   id: "aboutMe",
+  //   title: "About Me",
+  //   href: "aboutMe",
+  // },
   {
     id: "projects",
     title: "Projects",
-    href: "Projects",
+    href: "projects",
   },
   {
     id: "stack",

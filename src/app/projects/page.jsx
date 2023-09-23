@@ -17,7 +17,9 @@ export const projectList = [
       stacks: ["java", "springboot", "postgreSQL", "jwt"],
     },
     img: false,
-    description: "<selfkiju<sahledfu<hsaldfgu<sldugb<sldugfhbl<sduhgb<lsuhgl<s",
+    description:
+      "Primo progetto full stack creato in totale autonomia, un sito che permette di creare in maniera autonoma per personaggi per giocare al gioco di ruolo Dungeons & Dragons quinta edizione.",
+    deploy: null,
   },
   {
     id: "Linkedin clone",
@@ -30,7 +32,8 @@ export const projectList = [
     back: null,
     img: false,
     description:
-      "<selfkiju <sahl edfu <hs aldfgu <s  ldugb<sl dugfh bl<sd uhgb<l su hgl<s",
+      "Clone del social media Linkedin scritto in collaborazione con colleghi del corso di Epicode. durante i lavori del progetto e fino alla consegna erano funzionanti anche pubblicazione post, commenti e like ai post e chat.",
+    deploy: null,
   },
   {
     id: "QuizTy",
@@ -41,9 +44,10 @@ export const projectList = [
       stacks: ["React", "Typescript"],
     },
     back: null,
-    img: false,
+    img: true,
     description:
-      "<selfkij u<sahledfu<hs aldfgu sldugb<sldu gfhb l<sduhg <lsu hgl<s",
+      "Primo progetto in React.Typescript: un quiz a risposta multipla.",
+    deploy: "https://quizty.vercel.app/",
   },
   {
     id: "Cinemille",
@@ -58,7 +62,9 @@ export const projectList = [
       stacks: ["java", "springboot", "postgreSQL"],
     },
     img: false,
-    description: "<selfkiju<sahledfu<hsaldfgu<sldugb<sldugfhbl<sduhgb<lsuhgl<s",
+    description:
+      "Sito per la gestione di un cinema multisala nel quale è possibile aggiornare la programmazione tramite file csv.",
+    deploy: null,
   },
   {
     id: "Gestione Energia",
@@ -70,7 +76,9 @@ export const projectList = [
       stacks: ["java", "spring boot", "postgreSQL", "jwt"],
     },
     img: false,
-    description: "<selfkiju<sahledfu<hsaldfgu<sldugb<sldugfhbl<sduhgb<lsuhgl<s",
+    description:
+      "Questo progetto è un Backend sviluppato in Java Spring Boot per un gestionale di fatturazione energetica b2b. L'obiettivo è quello di gestire le entità come comune, indirizzo e cliente e le loro interazioni all'interno del sistema.",
+    deploy: null,
   },
 ];
 
@@ -179,8 +187,7 @@ export default function Projects() {
                     )}
                   </div>
                 </div>
-                {/* ora non si vede ne immagine ne descrizione perché img è false, dare opzioni diverse */}
-                {e.img && (
+                {e.img && e.description && (
                   <div
                     className={
                       "animation border-t-2 border-t-[#333] " +
@@ -194,7 +201,43 @@ export default function Projects() {
                     <div className="w-8/12">
                       <img src={`${e.name}.png`} alt={e.name}></img>
                     </div>
-                    <div className="w-4/12 p-5">{e.description}</div>
+                    <div className="w-4/12 p-5">
+                      {e.deploy && (
+                        <a
+                          className="cursor-pointer"
+                          href={e.deploy}
+                          target="_blank"
+                        >
+                          <u>{e.name}</u>
+                        </a>
+                      )}
+                      <div>{e.description}</div>
+                    </div>
+                  </div>
+                )}
+                {!e.img && e.description && (
+                  <div
+                    className={
+                      "animation border-t-2 border-t-[#333] " +
+                      (selectedDescription[e?.name] === "hidden"
+                        ? "hidden"
+                        : selectedDescription[e?.name] === "flex"
+                        ? "flex"
+                        : "hidden")
+                    }
+                  >
+                    <div className="p-5">
+                      {e.deploy && (
+                        <a
+                          className="cursor-pointer"
+                          href={e.deploy}
+                          target="_blank"
+                        >
+                          <u>{e.name}</u>
+                        </a>
+                      )}
+                      <div>{e.description}</div>
+                    </div>
                   </div>
                 )}
               </div>
