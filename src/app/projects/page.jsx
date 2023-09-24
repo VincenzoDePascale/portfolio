@@ -199,7 +199,7 @@ export default function Projects() {
                     }
                   >
                     <div className="w-8/12">
-                      <img src={`${e.name}.png`} alt={e.name}></img>
+                      <img src={`/${e.name}.png`} alt={e.name}></img>
                     </div>
                     <div className="w-4/12 p-5">
                       {e.deploy && (

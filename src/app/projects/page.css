@@ -12,25 +12,31 @@
 @-webkit-keyframes slideIn {
   0% {
     transform: translateY(-125px);
+    opacity: 0;
   }
   100% {
+    opacity: 1;
     transform: translateY(0);
   }
 }
 @-moz-keyframes slideIn {
   0% {
     transform: translateY(-125px);
+    opacity: 0;
   }
   100% {
     transform: translateY(0);
+    opacity: 1;
   }
 }
 @keyframes slideIn {
   0% {
     transform: translateY(-125px);
+    opacity: 0;
   }
   100% {
     transform: translateY(0);
+    opacity: 1;
   }
 }
 
