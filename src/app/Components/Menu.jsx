@@ -123,7 +123,7 @@ export default function Menu() {
                     } ${i === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
                     onClick={() => setActive(e.title)}
                   >
-                    <a className="" href={`#${e.id}`}>
+                    <a className="" href={`/${e.id}`}>
                       {e.title}
                     </a>
                   </li>
