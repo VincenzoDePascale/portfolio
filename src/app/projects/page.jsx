@@ -16,7 +16,7 @@ export const projectList = [
       link: "https://github.com/VincenzoDePascale/SchedePG-be",
       stacks: ["java", "springboot", "postgreSQL", "jwt"],
     },
-    img: false,
+    img: "/QuizTy.png",
     description:
       "Primo progetto full stack creato in totale autonomia, un sito che permette di creare in maniera autonoma per personaggi per giocare al gioco di ruolo Dungeons & Dragons quinta edizione.",
     deploy: null,
@@ -200,7 +200,7 @@ export default function Projects() {
                   >
                     <div className="flex-col md:flex-row flex align-center md:justify-between w-auto m-auto md:m-0 mt-2">
                       <div className="p-5">
-                        <img src={`/${e.name}.png`} alt={e.name} />
+                        <img src={e.img} alt={e.name} />
                       </div>
                       <div className="p-5">
                         {e.deploy && (
