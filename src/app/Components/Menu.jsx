@@ -60,7 +60,7 @@ export default function Menu() {
                 }`}
                 onClick={() => setActive(e.title)}
               >
-                <a className="lg:mx-[35px] md:mx-[10px]" href={`${e.href}`}>
+                <a className="lg:mx-[35px] md:mx-[10px]" href={`#${e.href}`}>
                   {e.title}
                 </a>
               </li>
