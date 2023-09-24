@@ -13,30 +13,45 @@
   0% {
     transform: translateY(-125px);
     opacity: 0;
+    z-index: -100;
+  }
+  95% {
+    z-index: -90;
   }
   100% {
     opacity: 1;
     transform: translateY(0);
+    z-index: 0;
   }
 }
 @-moz-keyframes slideIn {
   0% {
     transform: translateY(-125px);
     opacity: 0;
+    z-index: -100;
+  }
+  95% {
+    z-index: -90;
   }
   100% {
     transform: translateY(0);
     opacity: 1;
+    z-index: 0;
   }
 }
 @keyframes slideIn {
   0% {
     transform: translateY(-125px);
     opacity: 0;
+    z-index: -100;
+  }
+  95% {
+    z-index: -90;
   }
   100% {
     transform: translateY(0);
     opacity: 1;
+    z-index: 0;
   }
 }
 

@@ -88,7 +88,7 @@ export default function Projects() {
 
   return (
     <>
-      <div className="text-white py-8">
+      <div className="text-white py-8 ab">
         <div className="container mx-auto">
           <div className="titlebox flex justify-around">
             <h2
