@@ -200,7 +200,7 @@ export default function Projects() {
                   >
                     <div className="flex-col md:flex-row flex align-center md:justify-between w-auto m-auto md:m-0 mt-2">
                       <div className="p-5">
-                        <img src={`/${e.name}.png`} alt={e.name}></img>
+                        <img src={`/QuizTy.png`} alt={e.name}></img>
                       </div>
                       <div className="p-5">
                         {e.deploy && (
