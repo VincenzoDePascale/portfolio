@@ -44,7 +44,7 @@ export const projectList = [
       stacks: ["React", "Typescript"],
     },
     back: null,
-    img: true,
+    img: false,
     description:
       "Primo progetto in React.Typescript: un quiz a risposta multipla.",
     deploy: "https://quizty.vercel.app/",
