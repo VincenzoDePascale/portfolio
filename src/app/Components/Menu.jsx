@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { useState } from "react";
 import "./Menu.css";
@@ -37,7 +39,7 @@ export default function Menu() {
         <nav className=" flex p-2 pippo text-white ">
           {/* Logo */}
           <a href="/" className="flex items-center">
-            <img src="/io.jpg" className="w-[45px]" />
+            <img src="/io.jpg" alt="logo - name" className="w-[45px]" />
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
