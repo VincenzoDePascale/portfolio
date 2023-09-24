@@ -16,7 +16,7 @@ export const projectList = [
       link: "https://github.com/VincenzoDePascale/SchedePG-be",
       stacks: ["java", "springboot", "postgreSQL", "jwt"],
     },
-    img: "/QuizTy.png",
+    img: null,
     description:
       "Primo progetto full stack creato in totale autonomia, un sito che permette di creare in maniera autonoma per personaggi per giocare al gioco di ruolo Dungeons & Dragons quinta edizione.",
     deploy: null,
@@ -44,7 +44,7 @@ export const projectList = [
       stacks: ["React", "Typescript"],
     },
     back: null,
-    img: false,
+    img: "/QuizTy.png",
     description:
       "Primo progetto in React.Typescript: un quiz a risposta multipla.",
     deploy: "https://quizty.vercel.app/",
