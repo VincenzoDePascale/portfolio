@@ -45,7 +45,9 @@ export default function Menu() {
               strokeLinejoin="round"
               d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
             />
-            <p className="ml-5 font-semibold text-2xl">Vincenzo De Pascale</p>
+            <p className="hidden md:block ml-5 font-semibold text-2xl">
+              Vincenzo De Pascale
+            </p>
           </a>
 
           {/* Desktop Navigation */}
@@ -66,7 +68,7 @@ export default function Menu() {
           </ul>
 
           {/* Mobile Navigation */}
-          <div className="md:hidden flex flex-1 justify-end ">
+          <div className="md:hidden relative flex flex-1 justify-end">
             {toggle && (
               <>
                 <span v-show="open" onClick={() => setToggle(!toggle)}>
@@ -111,7 +113,6 @@ export default function Menu() {
               className={`${
                 !toggle ? "hidden" : "flex"
               } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar bg-[#333]`}
-              style={{ zIndex: 1 }}
             >
               <ul className="list-none flex justify-end items-start flex-1 flex-col">
                 {navLinks.map((e, i) => (

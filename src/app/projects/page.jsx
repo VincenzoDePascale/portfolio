@@ -88,23 +88,23 @@ export default function Projects() {
 
   return (
     <>
-      <div className="text-white py-8 ab">
+      <div className="text-white py-8">
         <div className="container mx-auto">
           <div className="titlebox flex justify-around">
             <h2
-              className="title font-semibold mb-4"
+              className="title font-semibold mb-4 cursor-pointer"
               onClick={() => setSelectedType("frontEnd")}
             >
               Front End
             </h2>
             <h2
-              className="title font-semibold mb-4"
+              className="title font-semibold mb-4 cursor-pointer"
               onClick={() => setSelectedType("backEnd")}
             >
               Back End
             </h2>
             <h2
-              className="title font-semibold mb-4"
+              className="title font-semibold mb-4 cursor-pointer"
               onClick={() => setSelectedType("fullStack")}
             >
               Full Stack
@@ -127,11 +127,11 @@ export default function Projects() {
                   setSelectedDescription({ [e?.name]: "hidden" })
                 }
               >
-                <div className="flex flex-nowrap justify-between items-center w-full h-full px-8 py-4">
-                  <h2 className="text-xl font-semibold text-white capitalize ml-5 w-3/12">
+                <div className="vCardByMenu flex flex-nowrap justify-between items-center w-full h-full px-8 py-4 bg-black relative">
+                  <h2 className="text-xl font-semibold text-white capitalize ml-5 w-6/12 md:w-3/12 flex flex-nowrap">
                     {e.name}
                   </h2>
-                  <div className="w-9/12">
+                  <div className="w-6/12 md:w-9/12">
                     {e.front && (
                       <>
                         <div
@@ -142,7 +142,7 @@ export default function Projects() {
                               : "")
                           }
                         >
-                          <div className="text-sm text-center w-10/12 mx-auto">
+                          <div className="text-sm hidden md:block text-center w-10/12 mx-auto">
                             {e.front.stacks.map((stack, i) => (
                               <span key={i}>
                                 {stack}
@@ -150,9 +150,9 @@ export default function Projects() {
                               </span>
                             ))}
                           </div>
-                          <div className="flex flex-col w-2/12 mx-auto">
+                          <div className="flex flex-col w-12/12 md:w-2/12 mx-auto">
                             <a
-                              className="cursor-pointer"
+                              className="cursor-pointer text-slate-500 underline font-semibold"
                               href={e.front.link}
                               target="_blank"
                             >
@@ -165,7 +165,7 @@ export default function Projects() {
                     {e.back && (
                       <>
                         <div className="flex flex-nowrap items-center py-2">
-                          <div className="text-sm text-center w-10/12 mx-auto">
+                          <div className="text-sm hidden md:block text-center w-10/12 mx-auto">
                             {e.back.stacks.map((stack, i) => (
                               <span key={i}>
                                 {stack}
@@ -173,9 +173,9 @@ export default function Projects() {
                               </span>
                             ))}
                           </div>
-                          <div className="flex flex-col w-2/12 mx-auto">
+                          <div className="flex flex-col w-12/12 md:w-2/12 mx-auto">
                             <a
-                              className="cursor-pointer"
+                              className="cursor-pointer text-slate-500 underline font-semibold"
                               href={e.back.link}
                               target="_blank"
                             >
@@ -190,7 +190,7 @@ export default function Projects() {
                 {e.img && e.description && (
                   <div
                     className={
-                      "animation border-t-2 border-t-[#333] " +
+                      "animation border-t-2 border-t-[#333] relative " +
                       (selectedDescription[e?.name] === "hidden"
                         ? "hidden"
                         : selectedDescription[e?.name] === "flex"
@@ -198,27 +198,29 @@ export default function Projects() {
                         : "hidden")
                     }
                   >
-                    <div className="w-8/12">
-                      <img src={`/${e.name}.png`} alt={e.name}></img>
-                    </div>
-                    <div className="w-4/12 p-5">
-                      {e.deploy && (
-                        <a
-                          className="cursor-pointer"
-                          href={e.deploy}
-                          target="_blank"
-                        >
-                          <u>{e.name}</u>
-                        </a>
-                      )}
-                      <div>{e.description}</div>
+                    <div className="flex-col md:flex-row flex align-center md:justify-between w-auto m-auto md:m-0 mt-2">
+                      <div className="p-5">
+                        <img src={`/${e.name}.png`} alt={e.name}></img>
+                      </div>
+                      <div className="p-5">
+                        {e.deploy && (
+                          <a
+                            className="cursor-pointer"
+                            href={e.deploy}
+                            target="_blank"
+                          >
+                            <u>{e.name}</u>
+                          </a>
+                        )}
+                        <div>{e.description}</div>
+                      </div>
                     </div>
                   </div>
                 )}
                 {!e.img && e.description && (
                   <div
                     className={
-                      "animation border-t-2 border-t-[#333] " +
+                      "animation border-t-2 border-t-[#333] relative " +
                       (selectedDescription[e?.name] === "hidden"
                         ? "hidden"
                         : selectedDescription[e?.name] === "flex"

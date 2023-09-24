@@ -16,6 +16,7 @@
     z-index: -100;
   }
   95% {
+    opacity: 0.9;
     z-index: -90;
   }
   100% {
@@ -31,6 +32,7 @@
     z-index: -100;
   }
   95% {
+    opacity: 0.9;
     z-index: -90;
   }
   100% {
@@ -46,6 +48,7 @@
     z-index: -100;
   }
   95% {
+    opacity: 0.9;
     z-index: -90;
   }
   100% {
@@ -53,6 +56,10 @@
     opacity: 1;
     z-index: 0;
   }
+}
+
+.vCardByMenu {
+  z-index: -1;
 }
 
 .animation {
