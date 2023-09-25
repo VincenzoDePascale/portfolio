@@ -107,8 +107,8 @@ export const authList = [
 export default function Stack() {
   return (
     <>
-      <div className="my-10">
-        <div className="text-white py-8">
+      <div className="box">
+        <div className="text-white pb-8">
           <div className="container mx-auto text-center">
             <h2 className="text-2xl font-semibold mb-4">Front End</h2>
             <div className="flex flex-wrap justify-center">
@@ -136,7 +136,7 @@ export default function Stack() {
 
         <div className="text-white py-8">
           <div className="container mx-auto text-center">
-            <h2 className="text-2xl font-semibold mb-4">Sql</h2>
+            <h2 className="text-2xl font-semibold mb-4">SQL</h2>
             <div className="flex flex-wrap justify-center">
               {sqlList.map((e, i) => (
                 <div key={i} className="col flex justify-center items-center">
@@ -160,7 +160,7 @@ export default function Stack() {
           </div>
         </div>
 
-        <div className="text-white py-8">
+        <div className="text-white pt-8">
           <div className="container mx-auto text-center">
             <h2 className="text-2xl font-semibold mb-4">Authentication</h2>
             <div className="flex flex-wrap justify-center">

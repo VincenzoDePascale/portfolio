@@ -88,26 +88,39 @@ export default function Projects() {
 
   return (
     <>
-      <div className="text-white py-8">
+      <div className="text-white box">
         <div className="container mx-auto">
           <div className="titlebox flex justify-around">
             <h2
-              className="title font-semibold mb-4 cursor-pointer"
+              className={`font-semibold mb-4 cursor-pointer underline underline-offset-4 + ${
+                selectedType === "fullStack"
+                  ? "decoration-white"
+                  : "decoration-[#333]"
+              }`}
+              onClick={() => setSelectedType("fullStack")}
+            >
+              Full Stack
+            </h2>
+            <h2
+              className={`font-semibold mb-4 cursor-pointer underline underline-offset-4 + ${
+                selectedType === "frontEnd"
+                  ? "decoration-white"
+                  : "decoration-[#333]"
+              }`}
               onClick={() => setSelectedType("frontEnd")}
             >
               Front End
             </h2>
+
             <h2
-              className="title font-semibold mb-4 cursor-pointer"
+              className={`font-semibold mb-4 cursor-pointer underline underline-offset-4 + ${
+                selectedType === "backEnd"
+                  ? "decoration-white"
+                  : "decoration-[#333]"
+              }`}
               onClick={() => setSelectedType("backEnd")}
             >
               Back End
-            </h2>
-            <h2
-              className="title font-semibold mb-4 cursor-pointer"
-              onClick={() => setSelectedType("fullStack")}
-            >
-              Full Stack
             </h2>
           </div>{" "}
           {/* per le animazioni 3d, mettere attorno ad ogni singola card
@@ -190,7 +203,7 @@ export default function Projects() {
                 {e.img && e.description && (
                   <div
                     className={
-                      "animation border-t-2 border-t-[#333] relative " +
+                      "animationIn border-t-2 border-t-[#333] relative " +
                       (selectedDescription[e?.name] === "hidden"
                         ? "hidden"
                         : selectedDescription[e?.name] === "flex"
@@ -220,7 +233,7 @@ export default function Projects() {
                 {!e.img && e.description && (
                   <div
                     className={
-                      "animation border-t-2 border-t-[#333] relative " +
+                      "animationIn border-t-2 border-t-[#333] relative " +
                       (selectedDescription[e?.name] === "hidden"
                         ? "hidden"
                         : selectedDescription[e?.name] === "flex"

@@ -9,7 +9,7 @@ export default function Contacts() {
 
   return (
     <>
-      <div className="text-white py-8">
+      <div className="text-white box">
         <div className="container mx-auto">
           <h2 className="text-2xl font-semibold mb-4">Contatti Utili</h2>
 

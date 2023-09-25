@@ -2,6 +2,10 @@
   border-bottom: 2px solid #333;
 }
 
+.selected {
+  border-bottom: 2px solid #fff;
+}
+
 .boxCard {
   margin: 10px 0;
   border: 1px solid #333;
@@ -9,6 +13,11 @@
   background-position: center;
 }
 
+.vCardByMenu {
+  z-index: -1;
+}
+
+/* in */
 @-webkit-keyframes slideIn {
   0% {
     transform: translateY(-125px);
@@ -58,11 +67,7 @@
   }
 }
 
-.vCardByMenu {
-  z-index: -1;
-}
-
-.animation {
+.animationIn {
   -webkit-animation: slideIn 2s forwards;
   -moz-animation: slideIn 2s forwards;
   animation: slideIn 2s forwards;

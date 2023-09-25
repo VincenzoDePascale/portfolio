@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <Menu />
-        <div className="box">{children}</div>
+        {children}
         <Footer />
       </body>
     </html>

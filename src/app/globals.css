@@ -16,9 +16,11 @@
   }
 }
 
-html{
+html {
   overflow-x: hidden;
   font-size: large;
+  height: 100%;
+  width: 100%;
 }
 
 body {
@@ -29,8 +31,12 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  height: 100%;
+  width: 100%;
 }
 
-.box{
-  margin: 50px 25px 50px 25px;
+.box {
+  height: 100%;
+  width: 100%;
+  padding: 75px 25px;
 }
