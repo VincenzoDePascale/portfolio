@@ -25,18 +25,11 @@ html {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: black;
   height: 100%;
   width: 100%;
 }
 
 .box {
-  height: 100%;
-  width: 100%;
   padding: 75px 25px;
 }
