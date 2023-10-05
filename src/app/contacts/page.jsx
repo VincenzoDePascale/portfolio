@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import "./page.css";
+import ContactForm from "./ContactForm";
 
 export default function Contacts() {
   const [selectedImgLinkedin, setSelectedImgLinkedin] = useState("none");
@@ -13,9 +14,9 @@ export default function Contacts() {
         <div className="container mx-auto">
           <h2 className="text-2xl font-semibold mb-4">Contatti Utili</h2>
 
-          <div className="flex">
-            <div className="contactBox flex flex-col">
-              <a
+          <div className="flex flex-col md:flex-row">
+            <div className="flex flex-col">
+              {/* <a
                 href="mailto:vincenzodepascale0@gmail.com"
                 target="_blank"
                 className="col p-4 rounded shadow md:col-start-1 flex items-center"
@@ -37,12 +38,12 @@ export default function Contacts() {
                   <h3 className="text-lg font-semibold mb-2">Email:</h3>
                   <p>vincenzodepascale0@gmail.com</p>
                 </div>
-              </a>
+              </a> */}
 
               <a
                 href="https://www.linkedin.com/in/vincenzo-de-pascale-30542322a/"
                 target="_blank"
-                className="col p-4 rounded shadow md:col-start-1 flex items-center"
+                className="bordBox p-4 rounded shadow md:col-start-1 flex items-center"
                 onMouseEnter={() => setSelectedImgLinkedin("block")}
                 onMouseLeave={() => setSelectedImgLinkedin("none")}
               >
@@ -58,7 +59,7 @@ export default function Contacts() {
                       <path
                         fill-rule="evenodd"
                         d="M7.979 5v1.586a3.5 3.5 0 0 1 3.082-1.574C14.3 5.012 15 7.03 15 9.655V15h-3v-4.738c0-1.13-.229-2.584-1.995-2.584-1.713 0-2.005 1.23-2.005 2.5V15H5.009V5h2.97ZM3 2.487a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"
-                        clip-rule="evenodd"
+                        clipRule="evenodd"
                       />
                       <path d="M3 5.012H0V15h3V5.012Z" />
                     </svg>
@@ -73,7 +74,7 @@ export default function Contacts() {
               <a
                 href="https://github.com/VincenzoDePascale"
                 target="_blank"
-                className="col p-4 rounded shadow md:col-start-1 flex items-center"
+                className="bordBox p-4 rounded shadow md:col-start-1 flex items-center"
                 onMouseEnter={() => setSelectedImgGit("block")}
                 onMouseLeave={() => setSelectedImgGit("none")}
               >
@@ -103,7 +104,7 @@ export default function Contacts() {
               <a
                 href="https://www.google.com/maps?q=Pagani,SA"
                 target="_blank"
-                className="col p-4 rounded shadow md:col-start-1 flex items-center"
+                className="bordBox p-4 rounded shadow md:col-start-1 flex items-center"
                 onMouseEnter={() => setSelectedImgMaps("block")}
                 onMouseLeave={() => setSelectedImgMaps("none")}
               >
@@ -127,8 +128,9 @@ export default function Contacts() {
               </a>
             </div>
 
-            <div className="flex w-8/12">
-              <div
+            <div className="flex longness">
+              {/* immagini a scorrimento */}
+              {/* <div
                 className={
                   "animation aspect-[6/3] " +
                   (selectedImgLinkedin === "none" ? "hidden" : "flex")
@@ -178,6 +180,11 @@ export default function Contacts() {
                   </a>{" "}
                   <style>{`#embed-map-display img { max-height: none; max-width: none!important; background: none!important; }`}</style>
                 </div>
+              </div> */}
+
+              {/* mail box */}
+              <div className="flex-col basis-full bordBox p-4 w-100">
+                <ContactForm />
               </div>
             </div>
           </div>
