@@ -43,14 +43,14 @@ export default function ContactForm() {
 
   return (
     <>
-      <h2 className="text-xl font-semibold m-2 text-center">Contattami</h2>
+      <h2 className="text-xl font-semibold m-2 text-center">Contact me</h2>
       <form ref={form} onSubmit={sendEmail}>
         <div className="flex items-center">
-          <label className="w-[33%]" htmlFor="name">
-            Nome:
+          <label className="w-[33%] lg:w-[20%]" htmlFor="name">
+            Name:
           </label>
           <input
-            className="bordBox bg-[#333] w-[66%]"
+            className="bordBox bg-[#333] w-[66%] lg:w-[80%]"
             type="text"
             id="name"
             name="user_name"
@@ -60,11 +60,11 @@ export default function ContactForm() {
           />
         </div>
         <div className="flex items-center">
-          <label className="w-[33%]" htmlFor="email">
+          <label className="w-[33%] lg:w-[20%]" htmlFor="email">
             Email:
           </label>
           <input
-            className="bordBox bg-[#333] w-[66%]"
+            className="bordBox bg-[#333] w-[66%] lg:w-[80%]"
             type="email"
             id="email"
             name="user_email"
@@ -74,11 +74,11 @@ export default function ContactForm() {
           />
         </div>
         <div className="flex items-center">
-          <label className="w-[33%]" htmlFor="message">
-            Messaggio:
+          <label className="w-[33%] lg:w-[20%]" htmlFor="message">
+            Message:
           </label>
           <textarea
-            className="bordBox bg-[#333] w-[66%]"
+            className="bordBox bg-[#333] w-[66%] lg:w-[80%]"
             id="message"
             name="message"
             // value={formData.message}
@@ -88,11 +88,11 @@ export default function ContactForm() {
         </div>
         <div className="flex flex-row-reverse">
           <button
-            className="col bg-[#333] px-2 py-1 mt-1 me-1"
+            className="col bg-[#333] w-[85px] px-2 py-1 mt-1 me-1 bordBox"
             type="submit"
             onClick={sendEmail}
           >
-            Invia
+            Send
           </button>
         </div>
       </form>

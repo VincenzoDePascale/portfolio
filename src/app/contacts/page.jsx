@@ -122,7 +122,7 @@ export default function Contacts() {
                   </span>
                 </div>
                 <div className="ml-4 truncate ...">
-                  <h3 className="text-lg font-semibold mb-2">Residenza:</h3>
+                  <h3 className="text-lg font-semibold mb-2">Location:</h3>
                   <p>Pagani (SA)</p>
                 </div>
               </a>
