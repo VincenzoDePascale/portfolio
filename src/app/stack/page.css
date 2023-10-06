@@ -1,14 +1,29 @@
 .col {
-    background-color: #333;
-    border: 1px solid #333;
-    border-radius: 5px;
-    margin: 5px;
-    width: 175px;
-    height: 50px;
-    transition: transform 0.3s ease;
-  }
-  
-  .col:hover {
-    transform: scale(1.2);
-  }
-  
+  position: relative; /* Aggiungiamo position: relative al div padre */
+  background-color: #333;
+  border: 1px solid #333;
+  border-radius: 5px;
+  margin: 5px;
+  width: 150px;
+  height: 150px;
+  transition: transform 0.3s ease;
+}
+
+.col:hover {
+  transform: scale(1.2);
+}
+
+.nameStack {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
+
+.col:hover .nameStack {
+  display: block;
+}

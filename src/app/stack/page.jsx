@@ -5,46 +5,52 @@ export const frontEndList = [
   {
     id: "HTML5",
     stack: "HTML5",
+    img: true,
   },
   {
     id: "CSS3",
     stack: "CSS3",
+    img: true,
   },
   {
     id: "SASS",
     stack: "SASS",
+    img: true,
   },
   {
     id: "BOOTSTRAP",
     stack: "BOOTSTRAP",
+    img: true,
   },
   {
     id: "TAILWIND",
     stack: "TAILWIND",
+    img: true,
   },
   {
     id: "JAVASCRIPT",
     stack: "JAVASCRIPT",
+    img: true,
   },
   {
     id: "TYPESCRIPT",
     stack: "TYPESCRIPT",
+    img: true,
   },
   {
     id: "REACT",
     stack: "REACT",
-  },
-  {
-    id: "REACT ROUTER",
-    stack: "REACT ROUTER",
+    img: true,
   },
   {
     id: "REDUX",
     stack: "REDUX",
+    img: true,
   },
   {
-    id: "NEXT.JS",
+    id: "NEXTJS",
     stack: "NEXT.JS",
+    img: true,
   },
 ];
 
@@ -52,22 +58,17 @@ export const backEndList = [
   {
     id: "JAVA",
     stack: "JAVA",
-  },
-  {
-    id: "SPRING",
-    stack: "SPRING",
+    img: true,
   },
   {
     id: "SPRINGBOOT",
     stack: "SPRINGBOOT",
-  },
-  {
-    id: "THYMELEAF",
-    stack: "THYMELEAF",
+    img: true,
   },
   {
     id: "APACHE MAVEN",
     stack: "APACHE MAVEN",
+    img: true,
   },
 ];
 
@@ -75,6 +76,7 @@ export const sqlList = [
   {
     id: "POSTGRESQL",
     stack: "POSTGRESQL",
+    img: true,
   },
 ];
 
@@ -82,25 +84,27 @@ export const toolList = [
   {
     id: "NPM",
     stack: "NPM",
+    img: true,
   },
   {
     id: "POSTMAN",
     stack: "POSTMAN",
+    img: true,
   },
   {
     id: "TRELLO",
     stack: "TRELLO",
+    img: true,
+  },
+  {
+    id: "GITHUB",
+    stack: "GITHUB",
+    img: true,
   },
   {
     id: "GIT",
     stack: "GIT",
-  },
-];
-
-export const authList = [
-  {
-    id: "JWT",
-    stack: "JWT",
+    img: true,
   },
 ];
 
@@ -114,7 +118,21 @@ export default function Stack() {
             <div className="flex flex-wrap justify-center">
               {frontEndList.map((e, i) => (
                 <div key={i} className="col flex justify-center items-center">
-                  <p className="text-center flex justify-center">{e.stack}</p>
+                  {e.img && (
+                    <div className="flex flex-col justify-center items-center">
+                      <img
+                        src={`iconStack/${e.id}.svg`}
+                        alt={e.stack}
+                        className="max-w-[75px] max-h-[75px]"
+                      />
+                      <p className="nameStack text-center flex justify-center">
+                        {e.stack}
+                      </p>
+                    </div>
+                  )}{" "}
+                  {!e.img && (
+                    <p className="text-center flex justify-center">{e.stack}</p>
+                  )}{" "}
                 </div>
               ))}
             </div>
@@ -127,7 +145,21 @@ export default function Stack() {
             <div className="flex flex-wrap justify-center">
               {backEndList.map((e, i) => (
                 <div key={i} className="col flex justify-center items-center">
-                  <p className="text-center flex justify-center">{e.stack}</p>
+                  {e.img && (
+                    <div className="flex flex-col justify-center items-center">
+                      <img
+                        src={`iconStack/${e.id}.svg`}
+                        alt={e.stack}
+                        className="max-w-[75px] max-h-[75px]"
+                      />
+                      <p className="nameStack text-center flex justify-center">
+                        {e.stack}
+                      </p>
+                    </div>
+                  )}{" "}
+                  {!e.img && (
+                    <p className="text-center flex justify-center">{e.stack}</p>
+                  )}{" "}
                 </div>
               ))}
             </div>
@@ -140,7 +172,21 @@ export default function Stack() {
             <div className="flex flex-wrap justify-center">
               {sqlList.map((e, i) => (
                 <div key={i} className="col flex justify-center items-center">
-                  <p className="text-center flex justify-center">{e.stack}</p>
+                  {e.img && (
+                    <div className="flex flex-col justify-center items-center">
+                      <img
+                        src={`iconStack/${e.stack}.svg`}
+                        alt={e.stack}
+                        className="max-w-[75px] max-h-[75px]"
+                      />
+                      <p className="nameStack text-center flex justify-center">
+                        {e.stack}
+                      </p>
+                    </div>
+                  )}{" "}
+                  {!e.img && (
+                    <p className="text-center flex justify-center">{e.stack}</p>
+                  )}{" "}
                 </div>
               ))}
             </div>
@@ -153,20 +199,21 @@ export default function Stack() {
             <div className="flex flex-wrap justify-center">
               {toolList.map((e, i) => (
                 <div key={i} className="col flex justify-center items-center">
-                  <p className="text-center flex justify-center">{e.stack}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="text-white pt-8">
-          <div className="container mx-auto text-center">
-            <h2 className="text-2xl font-semibold mb-4">Authentication</h2>
-            <div className="flex flex-wrap justify-center">
-              {authList.map((e, i) => (
-                <div key={i} className="col flex justify-center items-center">
-                  <p className="text-center flex justify-center">{e.stack}</p>
+                  {e.img && (
+                    <div className="flex flex-col justify-center items-center">
+                      <img
+                        src={`iconStack/${e.stack}.svg`}
+                        alt={e.stack}
+                        className="max-w-[75px] max-h-[75px]"
+                      />
+                      <p className="nameStack text-center flex justify-center">
+                        {e.stack}
+                      </p>
+                    </div>
+                  )}{" "}
+                  {!e.img && (
+                    <p className="text-center flex justify-center">{e.stack}</p>
+                  )}{" "}
                 </div>
               ))}
             </div>
