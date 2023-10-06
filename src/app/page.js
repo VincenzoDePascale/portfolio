@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <div className="flex justify-center items-center boxHome">
+      <div className="flex justify-center items-center boxHome flex-col">
         <div className="text-center flex justify-center items-center">
           <div className="flex justify-center items-center">
             <h1 className="text-3xl font-semibold mb-2">
@@ -22,6 +22,16 @@ export default function Home() {
             />
           </div>
         </div>
+        <a
+          href={"/CV_VincenzoDePascale.pdf"}
+          download="CV_VincenzoDePascale.pdf"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <button className="cursor-pointer underline underline-offset-4 decoration-[#333]">
+            <span>Download CV</span>
+          </button>
+        </a>
       </div>
     </>
   );
