@@ -8,7 +8,7 @@ export default function AboutMe() {
         <h2 className="text-xl font-semibold m-2">About Me</h2>
         <div className="ms-2 mt-10">
           <p className="text-lg">
-            Hello, I'm Vincenzo, a passionate developer.
+            Hello, I am Vincenzo, a passionate developer.
           </p>
           <p>
             I love technology,{" "}
