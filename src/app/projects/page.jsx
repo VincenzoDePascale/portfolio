@@ -153,7 +153,7 @@ export default function Projects() {
                               e.stacksFe.map((e, i) => (
                                 <Tooltip key={i} title={e} placement="top">
                                   <img
-                                    src={`${e}.svg`}
+                                    src={`/${e}.svg`}
                                     alt="logo stack"
                                     className=" mx-1 w-[20px] md:w-[30px] h-[20px] md:h-[30px]"
                                   />
@@ -165,7 +165,7 @@ export default function Projects() {
                               e.stacksBe.map((e, i) => (
                                 <Tooltip key={i} title={e} placement="top">
                                   <img
-                                    src={`${e}.svg`}
+                                    src={`/${e}.svg`}
                                     alt="logo stack"
                                     className=" mx-1 w-[20px] md:w-[30px] h-[20px] md:h-[30px]"
                                   />
@@ -177,7 +177,7 @@ export default function Projects() {
                       <div className="flex justify-center">
                         {e.img && (
                           <img
-                            src={`${e.img}`}
+                            src={`/${e.img}`}
                             alt="immage project"
                             className="w-[250px] h-[175px] md:hidden my-5 flex"
                           />
@@ -195,7 +195,7 @@ export default function Projects() {
                         >
                           <span className="md:hidden text-xs mr-3">demo</span>
                           <img
-                            src="ONLINE.svg"
+                            src="/ONLINE.svg"
                             alt={`link alsito di ${e.name}`}
                             className="max-w-[25px] max-h-[25px]"
                           />
@@ -209,7 +209,7 @@ export default function Projects() {
                       >
                         <span className="md:hidden text-xs mr-3">code</span>
                         <img
-                          src="GITHUB.svg"
+                          src="/GITHUB.svg"
                           alt={`link alla repo di ${e.name}`}
                           className="max-w-[25px] max-h-[25px]"
                         />
