@@ -177,7 +177,7 @@ export default function Projects() {
                       <div className="flex justify-center">
                         {e.img && (
                           <img
-                            src={`/${e.img}`}
+                            src={`${e.img}`}
                             alt="immage project"
                             className="w-[250px] h-[175px] md:hidden my-5 flex"
                           />
