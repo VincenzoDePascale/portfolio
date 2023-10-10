@@ -1,89 +1,79 @@
 "use client";
 import Atropos from "atropos/react";
 import React, { useState } from "react";
+import Tooltip from "@mui/material/Tooltip";
 import "./page.css";
 
-export const projectList = [
+export const projects = [
   {
     id: "Schede pg",
     name: "Schede pg",
-    type: "fullStack",
-    front: {
-      link: "https://github.com/VincenzoDePascale/schedePG-fe",
-      stacks: ["React", "Redux", "Router dom"],
-    },
-    back: {
-      link: "https://github.com/VincenzoDePascale/SchedePG-be",
-      stacks: ["java", "springboot", "postgreSQL", "jwt"],
-    },
-    img: null,
-    description:
-      "Primo progetto full stack creato in totale autonomia, un sito che permette di creare in maniera autonoma per personaggi per giocare al gioco di ruolo Dungeons & Dragons quinta edizione.",
-    deploy: null,
-  },
-  {
-    id: "Linkedin clone",
-    name: "Linkedin clone",
-    type: "frontEnd",
-    front: {
-      link: "https://github.com/Guthembergg/buildweek-linkedin_clone",
-      stacks: ["React", "Redux", "Router dom"],
-    },
-    back: null,
-    img: false,
-    description:
-      "Clone del social media Linkedin scritto in collaborazione con colleghi del corso di Epicode. durante i lavori del progetto e fino alla consegna erano funzionanti anche pubblicazione post, commenti e like ai post e chat.",
-    deploy: null,
+    type: "full-Stack", // fullStack - frontEnd - backEnd
+    repo: "https://github.com/stars/VincenzoDePascale/lists/schede-pg-d-d-5e",
+    link: null, //deploy
+    stacksFe: ["javascript", "react", "redux"],
+    stacksBe: ["java", "springboot", "postgreSQL"],
+    logo: null, // /nome.png
+    img: null, // /nome.png
+    descrizione:
+      "Primo progetto full stack creato in totale autonomia: un sito che permette di creare in maniera autonoma e rapida personaggi per giocare al gioco di ruolo Dungeons & Dragons quinta edizione.",
   },
   {
     id: "QuizTy",
     name: "QuizTy",
-    type: "frontEnd",
-    front: {
-      link: "https://github.com/VincenzoDePascale/quizTy",
-      stacks: ["React", "Typescript"],
-    },
-    back: null,
-    img: "/QuizTy.png",
-    description:
+    type: "front-End", // fullStack - frontEnd - backEnd
+    repo: "https://github.com/VincenzoDePascale/quizTy",
+    link: "https://quizty.vercel.app/", //deploy
+    stacksFe: ["Typescript", "React"],
+    stacksBe: null,
+    logo: null, // /nome.png
+    img: "/QuizTy.png", // /nome.png
+    descrizione:
       "Primo progetto in React.Typescript: un quiz a risposta multipla.",
-    deploy: "https://quizty.vercel.app/",
+  },
+  {
+    id: "GestioneEnergia",
+    name: "Gestione Energia",
+    type: "back-End", // fullStack - frontEnd - backEnd
+    repo: "https://github.com/VincenzoDePascale/Spring_gestioneEnergia",
+    link: null, //deploy
+    stacksFe: null,
+    stacksBe: ["java", "springboot", "postgreSQL"],
+    logo: null, // /nome.png
+    img: "/GestioneEnergia.png", // /nome.png
+    descrizione:
+      "Questo progetto è un Backend sviluppato in Java Spring Boot per un gestionale di fatturazione energetica b2b. L'obiettivo è quello di gestire le entità come comune, indirizzo e cliente e le loro interazioni all'interno del sistema.",
+  },
+  {
+    id: "LinkedinClone",
+    name: "Linkedin clone",
+    type: "front-End", // fullStack - frontEnd - backEnd
+    repo: "https://github.com/Guthembergg/buildweek-linkedin_clone",
+    link: null, //deploy
+    stacksFe: ["React", "Redux"],
+    stacksBe: null,
+    logo: null, // /nome.png
+    img: "/LinkedinClone.jpg", // /nome.png
+    descrizione:
+      "Clone del social media Linkedin scritto in collaborazione con colleghi del corso di Epicode. durante i lavori del progetto e fino alla consegna erano funzionanti anche pubblicazione post, commenti e like ai post e chat.",
   },
   {
     id: "Cinemille",
     name: "Cinemille",
-    type: "fullStack",
-    front: {
-      link: "https://github.com/VincenzoDePascale/cinemille-fe",
-      stacks: ["javascript", "React", "sccs", "bootstrap", "moment"],
-    },
-    back: {
-      link: "https://github.com/VincenzoDePascale/CineMille-be",
-      stacks: ["java", "springboot", "postgreSQL"],
-    },
-    img: false,
-    description:
+    type: "full-Stack", // full-Stack - front-End - back-End
+    repo: "https://github.com/Guthembergg/buildweek-linkedin_clone",
+    link: null, //deploy
+    stacksFe: ["javascript", "React", "SASS", "bootstrap"],
+    stacksBe: ["java", "springboot", "postgreSQL"],
+    logo: null, // /nome.png
+    img: null, // /nome.png
+    descrizione:
       "Sito per la gestione di un cinema multisala nel quale è possibile aggiornare la programmazione tramite file csv.",
-    deploy: null,
-  },
-  {
-    id: "Gestione Energia",
-    name: "Gestione Energia",
-    type: "backEnd",
-    front: null,
-    back: {
-      link: "https://github.com/VincenzoDePascale/Spring_gestioneEnergia",
-      stacks: ["java", "spring boot", "postgreSQL", "jwt"],
-    },
-    img: false,
-    description:
-      "Questo progetto è un Backend sviluppato in Java Spring Boot per un gestionale di fatturazione energetica b2b. L'obiettivo è quello di gestire le entità come comune, indirizzo e cliente e le loro interazioni all'interno del sistema.",
-    deploy: null,
   },
 ];
 
 export default function Projects() {
-  const [selectedType, setSelectedType] = useState("fullStack");
+  const [selectedType, setSelectedType] = useState("-");
   const [selectedDescription, setSelectedDescription] = useState({});
 
   return (
@@ -93,168 +83,140 @@ export default function Projects() {
           <div className="titlebox flex justify-around">
             <h2
               className={`font-semibold mb-4 cursor-pointer underline underline-offset-4 + ${
-                selectedType === "fullStack"
+                selectedType === "-" ? "decoration-white" : "decoration-[#333]"
+              }`}
+              onClick={() => setSelectedType("-")}
+            >
+              All
+            </h2>
+            <h2
+              className={`font-semibold mb-4 cursor-pointer underline underline-offset-4 + ${
+                selectedType === "full-Stack"
                   ? "decoration-white"
                   : "decoration-[#333]"
               }`}
-              onClick={() => setSelectedType("fullStack")}
+              onClick={() => setSelectedType("full-Stack")}
             >
               Full Stack
             </h2>
             <h2
               className={`font-semibold mb-4 cursor-pointer underline underline-offset-4 + ${
-                selectedType === "frontEnd"
+                selectedType === "front-End"
                   ? "decoration-white"
                   : "decoration-[#333]"
               }`}
-              onClick={() => setSelectedType("frontEnd")}
+              onClick={() => setSelectedType("front-End")}
             >
               Front End
             </h2>
 
             <h2
               className={`font-semibold mb-4 cursor-pointer underline underline-offset-4 + ${
-                selectedType === "backEnd"
+                selectedType === "back-End"
                   ? "decoration-white"
                   : "decoration-[#333]"
               }`}
-              onClick={() => setSelectedType("backEnd")}
+              onClick={() => setSelectedType("back-End")}
             >
               Back End
             </h2>
           </div>{" "}
-          {/* per le animazioni 3d, mettere attorno ad ogni singola card
-        <Atropos className="my-atropos"></Atropos> */}
-          {/* MAP */}
-          {projectList
-            .filter((e) => e.type === selectedType)
+          {/* nuova lista card! */}
+          {projects
+            .filter((e) => e.type.includes(selectedType))
+            .sort(function (a, b) {
+              if (a.name < b.name) {
+                return -1;
+              }
+              if (a.name > b.name) {
+                return 1;
+              }
+              return 0;
+            })
             .map((e, i) => (
-              <div
-                key={i}
-                className="boxCard"
-                name={e.name}
-                onMouseEnter={() =>
-                  setSelectedDescription({ [e?.name]: "flex" })
-                }
-                onMouseLeave={() =>
-                  setSelectedDescription({ [e?.name]: "hidden" })
-                }
-              >
-                <div className="vCardByMenu flex flex-nowrap justify-between items-center w-full h-full px-8 py-4 bg-black relative">
-                  <h2 className="text-xl font-semibold text-white capitalize ml-5 w-6/12 md:w-3/12 flex flex-nowrap">
-                    {e.name}
-                  </h2>
-                  <div className="w-6/12 md:w-9/12">
-                    {e.front && (
-                      <>
-                        <div
-                          className={
-                            "flex flex-nowrap items-center py-2 " +
-                            (e.back !== null
-                              ? "border-b-2 border-b-[#333]"
-                              : "")
-                          }
+              <div key={i} className="boxCard" name={e.name}>
+                <div className="flex flex-col md:flex-row items-center justify-between p-2 bg-[#333]">
+                  <div className="flex px-2">
+                    {e.img && (
+                      <img
+                        src={`${e.img}`}
+                        alt="immage project"
+                        className="w-[375px] h-[250px] hidden md:block  mr-[25px]"
+                      />
+                    )}
+                    <div className="pb-2 flex flex-col md:items-start justify-around">
+                      <div className="flex flex-col md:flex-row items-center justify-around">
+                        <span className="text-2xl">{e.name}</span>
+                        <span className="flex flex-row ms-3">
+                          <span className="flex flex-row">
+                            {e.stacksFe &&
+                              e.stacksFe.map((e, i) => (
+                                <Tooltip key={i} title={e} placement="top">
+                                  <img
+                                    src={`/iconStack/${e}.svg`}
+                                    alt="logo stack"
+                                    className=" mx-1 w-[20px] md:w-[30px] h-[20px] md:h-[30px]"
+                                  />
+                                </Tooltip>
+                              ))}
+                          </span>
+                          <span className="flex flex-row">
+                            {e.stacksBe &&
+                              e.stacksBe.map((e, i) => (
+                                <Tooltip key={i} title={e} placement="top">
+                                  <img
+                                    src={`/iconStack/${e}.svg`}
+                                    alt="logo stack"
+                                    className=" mx-1 w-[20px] md:w-[30px] h-[20px] md:h-[30px]"
+                                  />
+                                </Tooltip>
+                              ))}
+                          </span>
+                        </span>
+                      </div>
+                      <div className="flex justify-center">
+                        {e.img && (
+                          <img
+                            src={`${e.img}`}
+                            alt="immage project"
+                            className="w-[250px] h-[175px] md:hidden my-5 flex"
+                          />
+                        )}
+                      </div>
+                      <div className="">{e.descrizione}</div>
+                    </div>
+                  </div>
+                  <div className="flex justify-end md:flex-col w-100">
+                    {e.link && (
+                      <a href={e.link} target="_blank" className="mb-2">
+                        <button
+                          className="button flex flex-row items-center justify-between mr-5 md:mr-0"
+                          role="button"
                         >
-                          <div className="text-sm hidden md:block text-center w-10/12 mx-auto">
-                            {e.front.stacks.map((stack, i) => (
-                              <span key={i}>
-                                {stack}
-                                {i !== e.front.stacks.length - 1 && ", "}
-                              </span>
-                            ))}
-                          </div>
-                          <div className="flex flex-col w-12/12 md:w-2/12 mx-auto">
-                            <a
-                              className="cursor-pointer text-slate-500 underline font-semibold"
-                              href={e.front.link}
-                              target="_blank"
-                            >
-                              GitHub-fe
-                            </a>
-                          </div>
-                        </div>
-                      </>
+                          <span className="md:hidden text-xs mr-3">demo</span>
+                          <img
+                            src="/online.svg"
+                            alt={`link alsito di ${e.name}`}
+                            className="max-w-[25px] max-h-[25px]"
+                          />
+                        </button>
+                      </a>
                     )}
-                    {e.back && (
-                      <>
-                        <div className="flex flex-nowrap items-center py-2">
-                          <div className="text-sm hidden md:block text-center w-10/12 mx-auto">
-                            {e.back.stacks.map((stack, i) => (
-                              <span key={i}>
-                                {stack}
-                                {i !== e.back.stacks.length - 1 && ", "}
-                              </span>
-                            ))}
-                          </div>
-                          <div className="flex flex-col w-12/12 md:w-2/12 mx-auto">
-                            <a
-                              className="cursor-pointer text-slate-500 underline font-semibold"
-                              href={e.back.link}
-                              target="_blank"
-                            >
-                              GitHub-be
-                            </a>
-                          </div>
-                        </div>
-                      </>
-                    )}
+                    <a href={e.repo} target="_blank">
+                      <button
+                        className="button flex flex-row items-center justify-between"
+                        role="button"
+                      >
+                        <span className="md:hidden text-xs mr-3">code</span>
+                        <img
+                          src="/iconStack/GITHUB.svg"
+                          alt={`link alla repo di ${e.name}`}
+                          className="max-w-[25px] max-h-[25px]"
+                        />
+                      </button>
+                    </a>
                   </div>
                 </div>
-                {e.img && e.description && (
-                  <div
-                    className={
-                      "animationIn border-t-2 border-t-[#333] relative " +
-                      (selectedDescription[e?.name] === "hidden"
-                        ? "hidden"
-                        : selectedDescription[e?.name] === "flex"
-                        ? "flex"
-                        : "hidden")
-                    }
-                  >
-                    <div className="flex-col md:flex-row flex align-center md:justify-between w-auto m-auto md:m-0 mt-2">
-                      <div className="p-5">
-                        <img src={e.img} alt={e.name} />
-                      </div>
-                      <div className="p-5">
-                        {e.deploy && (
-                          <a
-                            className="cursor-pointer"
-                            href={e.deploy}
-                            target="_blank"
-                          >
-                            <u>{e.name}</u>
-                          </a>
-                        )}
-                        <div>{e.description}</div>
-                      </div>
-                    </div>
-                  </div>
-                )}
-                {!e.img && e.description && (
-                  <div
-                    className={
-                      "animationIn border-t-2 border-t-[#333] relative " +
-                      (selectedDescription[e?.name] === "hidden"
-                        ? "hidden"
-                        : selectedDescription[e?.name] === "flex"
-                        ? "flex"
-                        : "hidden")
-                    }
-                  >
-                    <div className="p-5">
-                      {e.deploy && (
-                        <a
-                          className="cursor-pointer"
-                          href={e.deploy}
-                          target="_blank"
-                        >
-                          <u>{e.name}</u>
-                        </a>
-                      )}
-                      <div>{e.description}</div>
-                    </div>
-                  </div>
-                )}
               </div>
             ))}
         </div>

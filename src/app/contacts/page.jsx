@@ -4,10 +4,6 @@ import "./page.css";
 import ContactForm from "./ContactForm";
 
 export default function Contacts() {
-  const [selectedImgLinkedin, setSelectedImgLinkedin] = useState("none");
-  const [selectedImgGit, setSelectedImgGit] = useState("none");
-  const [selectedImgMaps, setSelectedImgMaps] = useState("none");
-
   return (
     <>
       <div className="text-white box">
@@ -16,36 +12,10 @@ export default function Contacts() {
 
           <div className="flex flex-col md:flex-row">
             <div className="flex flex-col">
-              {/* <a
-                href="mailto:vincenzodepascale0@gmail.com"
-                target="_blank"
-                className="col p-4 rounded shadow md:col-start-1 flex items-center"
-              >
-                <div>
-                  <span>
-                    <svg
-                      class="w-6 h-6 text-gray-800 dark:text-white"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="m17.418 3.623-.018-.008a6.713 6.713 0 0 0-2.4-.569V2h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2H9.89A6.977 6.977 0 0 1 12 8v5h-2V8A5 5 0 1 0 0 8v6a1 1 0 0 0 1 1h8v4a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-4h6a1 1 0 0 0 1-1V8a5 5 0 0 0-2.582-4.377ZM6 12H4a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Z" />
-                    </svg>
-                  </span>
-                </div>
-                <div className="ml-4 truncate ...">
-                  <h3 className="text-lg font-semibold mb-2">Email:</h3>
-                  <p>vincenzodepascale0@gmail.com</p>
-                </div>
-              </a> */}
-
               <a
                 href="https://www.linkedin.com/in/vincenzo-de-pascale-30542322a/"
                 target="_blank"
                 className="bordBox p-4 rounded shadow md:col-start-1 flex items-center"
-                onMouseEnter={() => setSelectedImgLinkedin("block")}
-                onMouseLeave={() => setSelectedImgLinkedin("none")}
               >
                 <div>
                   <span>
@@ -75,8 +45,6 @@ export default function Contacts() {
                 href="https://github.com/VincenzoDePascale"
                 target="_blank"
                 className="bordBox p-4 rounded shadow md:col-start-1 flex items-center"
-                onMouseEnter={() => setSelectedImgGit("block")}
-                onMouseLeave={() => setSelectedImgGit("none")}
               >
                 <div>
                   <span>
@@ -105,8 +73,6 @@ export default function Contacts() {
                 href="https://www.google.com/maps?q=Pagani,SA"
                 target="_blank"
                 className="bordBox p-4 rounded shadow md:col-start-1 flex items-center"
-                onMouseEnter={() => setSelectedImgMaps("block")}
-                onMouseLeave={() => setSelectedImgMaps("none")}
               >
                 <div>
                   <span>
@@ -129,59 +95,6 @@ export default function Contacts() {
             </div>
 
             <div className="flex longness">
-              {/* immagini a scorrimento */}
-              {/* <div
-                className={
-                  "animation aspect-[6/3] " +
-                  (selectedImgLinkedin === "none" ? "hidden" : "flex")
-                }
-              >
-                <img src="/linkedin.png" alt="linkedin" />
-              </div>
-              <div
-                className={
-                  "animation aspect-[6/3] " +
-                  (selectedImgGit === "none" ? "hidden" : "flex")
-                }
-              >
-                <img src="/git.png" alt="git" />
-              </div>
-              <div
-                className={`animation aspect-[6/3] ${
-                  selectedImgMaps === "none" ? "hidden" : "flex"
-                }`}
-              >
-                <div
-                  style={{
-                    maxWidth: "100%",
-                    overflow: "hidden",
-                    color: "red",
-                    width: "500px",
-                    height: "500px",
-                  }}
-                >
-                  <div
-                    id="embed-map-display"
-                    style={{ height: "100%", width: "100%", maxWidth: "100%" }}
-                  >
-                    <iframe
-                      style={{ height: "100%", width: "100%", border: "0" }}
-                      frameborder="0"
-                      src="https://www.google.com/maps/embed/v1/place?q=Pagani,+SA,+Italia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
-                    ></iframe>
-                  </div>
-                  <a
-                    className="embed-ded-maphtml"
-                    href="https://www.bootstrapskins.com/themes"
-                    id="enable-maps-data"
-                  >
-                    {" "}
-                    premium bootstrap themes
-                  </a>{" "}
-                  <style>{`#embed-map-display img { max-height: none; max-width: none!important; background: none!important; }`}</style>
-                </div>
-              </div> */}
-
               {/* mail box */}
               <div className="flex-col basis-full bordBox p-4 w-100">
                 <ContactForm />

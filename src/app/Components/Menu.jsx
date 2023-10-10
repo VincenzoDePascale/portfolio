@@ -3,29 +3,33 @@
 import Image from "next/image";
 import { useState } from "react";
 import "./Menu.css";
-import { Navbar } from "flowbite-react";
 
 export const navLinks = [
-  // {
-  //   id: "aboutMe",
-  //   title: "About Me",
-  //   href: "aboutMe",
-  // },
+  {
+    id: "home",
+    title: "Home",
+    href: "/",
+  },
+  {
+    id: "aboutMe",
+    title: "About Me",
+    href: "/aboutMe",
+  },
   {
     id: "projects",
     title: "Projects",
-    href: "projects",
+    href: "/projects",
   },
   {
     id: "stack",
     title: "Stack",
-    href: "stack",
+    href: "/stack",
   },
 
   {
     id: "contacts",
     title: "Contacts",
-    href: "contacts",
+    href: "/contacts",
   },
 ];
 
@@ -35,10 +39,10 @@ export default function Menu() {
 
   return (
     <>
-      <nav className="navbar">
-        <nav className=" flex p-2 pippo text-white ">
+      <nav className="navbar border-b-[1px] border-[#333]">
+        <nav className="flex p-2 text-white ">
           {/* Logo */}
-          <a href="/" className="flex items-center">
+          {/* <a href="/" className="flex items-center">
             <img src="/io.jpg" alt="logo - name" className="w-[45px]" />
             <path
               strokeLinecap="round"
@@ -48,10 +52,10 @@ export default function Menu() {
             <p className="hidden md:block ml-5 font-semibold text-2xl">
               Vincenzo De Pascale
             </p>
-          </a>
+          </a> */}
 
           {/* Desktop Navigation */}
-          <ul className="list-none md:flex hidden justify-end items-center flex-1">
+          <ul className="list-none md:flex hidden justify-center items-center flex-1">
             {navLinks.map((e, i) => (
               <li
                 key={e.id}
@@ -60,7 +64,7 @@ export default function Menu() {
                 }`}
                 onClick={() => setActive(e.title)}
               >
-                <a className="lg:mx-[35px] md:mx-[10px]" href={`/${e.href}`}>
+                <a className="lg:mx-[35px] md:mx-[10px]" href={`${e.href}`}>
                   {e.title}
                 </a>
               </li>
@@ -123,7 +127,7 @@ export default function Menu() {
                     } ${i === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
                     onClick={() => setActive(e.title)}
                   >
-                    <a className="" href={`/${e.id}`}>
+                    <a className="" href={`${e.href}`}>
                       {e.title}
                     </a>
                   </li>

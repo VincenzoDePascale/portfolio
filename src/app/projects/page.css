@@ -2,65 +2,13 @@
   margin: 10px 0;
   border: 1px solid #333;
   border-radius: 5px;
-  background-position: center;
+  width: 100%;
 }
 
-.vCardByMenu {
-  z-index: -1;
-}
-
-/* in */
-@-webkit-keyframes slideIn {
-  0% {
-    transform: translateY(-125px);
-    opacity: 0;
-    z-index: -100;
-  }
-  95% {
-    opacity: 0.9;
-    z-index: -90;
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-    z-index: 0;
-  }
-}
-@-moz-keyframes slideIn {
-  0% {
-    transform: translateY(-125px);
-    opacity: 0;
-    z-index: -100;
-  }
-  95% {
-    opacity: 0.9;
-    z-index: -90;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-    z-index: 0;
-  }
-}
-@keyframes slideIn {
-  0% {
-    transform: translateY(-125px);
-    opacity: 0;
-    z-index: -100;
-  }
-  95% {
-    opacity: 0.9;
-    z-index: -90;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-    z-index: 0;
-  }
-}
-
-.animationIn {
-  -webkit-animation: slideIn 2s forwards;
-  -moz-animation: slideIn 2s forwards;
-  animation: slideIn 2s forwards;
+.button {
+  padding: 5px;
+  color: rgb(255, 255, 255);
+  background: #666666;
+  cursor: pointer;
+  border-radius: 10px;
 }

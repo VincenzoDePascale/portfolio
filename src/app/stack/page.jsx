@@ -70,6 +70,11 @@ export const backEndList = [
     stack: "APACHE MAVEN",
     img: true,
   },
+  {
+    id: "JUNIT5",
+    stack: "jUnit 5",
+    img: true,
+  },
 ];
 
 export const sqlList = [

@@ -1,11 +1,16 @@
 .bordBox {
   border: 1px solid #333;
+  background: black;
   border-radius: 5px;
   margin: 5px;
 }
 
 .longness {
   flex: fit-content;
+}
+
+.bgInnerText {
+  background-color: #fff;
 }
 
 @-webkit-keyframes slideIn {

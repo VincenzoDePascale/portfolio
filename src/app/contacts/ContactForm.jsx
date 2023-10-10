@@ -33,18 +33,19 @@ export default function ContactForm() {
     emailjs.sendForm("service_8d1r9ot", "template_wuss68q", form.current).then(
       (result) => {
         console.log(result.text);
-        // Pulisci il modulo dopo l'invio dell'email
         setFormData({
           user_name: "",
           user_email: "",
           message: "",
         });
-        // Imposta il messaggio di alert
         setAlertMessage(
-          "Grazie per avermi inviato un'email, ti risponderò al più presto"
+          "Grazie per avermi inviato un'email, ti risponderò al più presto."
         );
       },
       (error) => {
+        setAlertMessage(
+          "Mi dispiace qualcosa è andato storto, riprova tra qualche minuto o contattami su Linkedin."
+        );
         console.log(error.text);
       }
     );
@@ -55,12 +56,12 @@ export default function ContactForm() {
       {alertMessage && <div className="alert">{alertMessage}</div>}
       <h2 className="text-xl font-semibold m-2 text-center">Contact me</h2>
       <form ref={form} onSubmit={sendEmail}>
-        <div className="flex items-center">
+        <div className="flex items-center ">
           <label className="w-[33%] lg:w-[20%]" htmlFor="name">
             Name:
           </label>
           <input
-            className="bordBox bg-[#333] w-[66%] lg:w-[80%]"
+            className="bordBox w-[66%] lg:w-[80%] bgInnerText text-black"
             type="text"
             id="name"
             name="user_name"
@@ -74,7 +75,7 @@ export default function ContactForm() {
             Email:
           </label>
           <input
-            className="bordBox bg-[#333] w-[66%] lg:w-[80%]"
+            className="bordBox w-[66%] lg:w-[80%] bgInnerText text-black"
             type="email"
             id="email"
             name="user_email"
@@ -88,7 +89,7 @@ export default function ContactForm() {
             Message:
           </label>
           <textarea
-            className="bordBox bg-[#333] w-[66%] lg:w-[80%]"
+            className="bordBox w-[66%] lg:w-[80%] bgInnerText text-black"
             id="message"
             name="message"
             value={formData.message}
@@ -98,7 +99,7 @@ export default function ContactForm() {
         </div>
         <div className="flex flex-row-reverse">
           <button
-            className="col bg-[#333] w-[85px] px-2 py-1 mt-1 me-1 bordBox"
+            className="col w-[85px] px-2 py-1 mt-1 me-1 bordBox"
             type="submit"
           >
             Send
