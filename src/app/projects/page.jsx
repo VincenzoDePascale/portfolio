@@ -11,8 +11,8 @@ export const projects = [
     type: "full-Stack", // fullStack - frontEnd - backEnd
     repo: "https://github.com/stars/VincenzoDePascale/lists/schede-pg-d-d-5e",
     link: null, //deploy
-    stacksFe: ["javascript", "react", "redux"],
-    stacksBe: ["java", "springboot", "postgreSQL"],
+    stacksFe: ["JAVASCRIPT", "REACT", "REDUX"],
+    stacksBe: ["JAVA", "SPRINGBOOT", "POSTGRESQL"],
     logo: null, // /nome.png
     img: null, // /nome.png
     descrizione:
@@ -24,7 +24,7 @@ export const projects = [
     type: "front-End", // fullStack - frontEnd - backEnd
     repo: "https://github.com/VincenzoDePascale/quizTy",
     link: "https://quizty.vercel.app/", //deploy
-    stacksFe: ["Typescript", "React"],
+    stacksFe: ["TYPESCRIPT", "REACT"],
     stacksBe: null,
     logo: null, // /nome.png
     img: "/QuizTy.png", // /nome.png
@@ -38,7 +38,7 @@ export const projects = [
     repo: "https://github.com/VincenzoDePascale/Spring_gestioneEnergia",
     link: null, //deploy
     stacksFe: null,
-    stacksBe: ["java", "springboot", "postgreSQL"],
+    stacksBe: ["JAVA", "SPRINGBOOT", "POSTGRESQL"],
     logo: null, // /nome.png
     img: "/GestioneEnergia.png", // /nome.png
     descrizione:
@@ -50,7 +50,7 @@ export const projects = [
     type: "front-End", // fullStack - frontEnd - backEnd
     repo: "https://github.com/Guthembergg/buildweek-linkedin_clone",
     link: null, //deploy
-    stacksFe: ["React", "Redux"],
+    stacksFe: ["REACT", "REDUX"],
     stacksBe: null,
     logo: null, // /nome.png
     img: "/LinkedinClone.jpg", // /nome.png
@@ -63,8 +63,8 @@ export const projects = [
     type: "full-Stack", // full-Stack - front-End - back-End
     repo: "https://github.com/Guthembergg/buildweek-linkedin_clone",
     link: null, //deploy
-    stacksFe: ["javascript", "React", "SASS", "bootstrap"],
-    stacksBe: ["java", "springboot", "postgreSQL"],
+    stacksFe: ["JAVASCRIPT", "REACT", "SASS", "BOOTSTRAP"],
+    stacksBe: ["JAVA", "SPRINGBOOT", "POSTGRESQL"],
     logo: null, // /nome.png
     img: null, // /nome.png
     descrizione:
@@ -153,7 +153,7 @@ export default function Projects() {
                               e.stacksFe.map((e, i) => (
                                 <Tooltip key={i} title={e} placement="top">
                                   <img
-                                    src={`/${e}.svg`}
+                                    src={`${e}.svg`}
                                     alt="logo stack"
                                     className=" mx-1 w-[20px] md:w-[30px] h-[20px] md:h-[30px]"
                                   />
@@ -165,7 +165,7 @@ export default function Projects() {
                               e.stacksBe.map((e, i) => (
                                 <Tooltip key={i} title={e} placement="top">
                                   <img
-                                    src={`/${e}.svg`}
+                                    src={`${e}.svg`}
                                     alt="logo stack"
                                     className=" mx-1 w-[20px] md:w-[30px] h-[20px] md:h-[30px]"
                                   />
