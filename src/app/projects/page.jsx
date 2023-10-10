@@ -195,7 +195,7 @@ export default function Projects() {
                         >
                           <span className="md:hidden text-xs mr-3">demo</span>
                           <img
-                            src="/online.svg"
+                            src="ONLINE.svg"
                             alt={`link alsito di ${e.name}`}
                             className="max-w-[25px] max-h-[25px]"
                           />
@@ -209,7 +209,7 @@ export default function Projects() {
                       >
                         <span className="md:hidden text-xs mr-3">code</span>
                         <img
-                          src="/iconStack/GITHUB.svg"
+                          src="GITHUB.svg"
                           alt={`link alla repo di ${e.name}`}
                           className="max-w-[25px] max-h-[25px]"
                         />
