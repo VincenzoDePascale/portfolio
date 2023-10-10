@@ -153,7 +153,7 @@ export default function Projects() {
                               e.stacksFe.map((e, i) => (
                                 <Tooltip key={i} title={e} placement="top">
                                   <img
-                                    src={`/iconStack/${e}.svg`}
+                                    src={`/${e}.svg`}
                                     alt="logo stack"
                                     className=" mx-1 w-[20px] md:w-[30px] h-[20px] md:h-[30px]"
                                   />
@@ -165,7 +165,7 @@ export default function Projects() {
                               e.stacksBe.map((e, i) => (
                                 <Tooltip key={i} title={e} placement="top">
                                   <img
-                                    src={`/iconStack/${e}.svg`}
+                                    src={`/${e}.svg`}
                                     alt="logo stack"
                                     className=" mx-1 w-[20px] md:w-[30px] h-[20px] md:h-[30px]"
                                   />

@@ -126,7 +126,7 @@ export default function Stack() {
                   {e.img && (
                     <div className="flex flex-col justify-center items-center">
                       <img
-                        src={`iconStack/${e.id}.svg`}
+                        src={`${e.id}.svg`}
                         alt={e.stack}
                         className="max-w-[75px] max-h-[75px]"
                       />
@@ -153,7 +153,7 @@ export default function Stack() {
                   {e.img && (
                     <div className="flex flex-col justify-center items-center">
                       <img
-                        src={`iconStack/${e.id}.svg`}
+                        src={`${e.id}.svg`}
                         alt={e.stack}
                         className="max-w-[75px] max-h-[75px]"
                       />
@@ -180,7 +180,7 @@ export default function Stack() {
                   {e.img && (
                     <div className="flex flex-col justify-center items-center">
                       <img
-                        src={`iconStack/${e.stack}.svg`}
+                        src={`${e.stack}.svg`}
                         alt={e.stack}
                         className="max-w-[75px] max-h-[75px]"
                       />
@@ -207,7 +207,7 @@ export default function Stack() {
                   {e.img && (
                     <div className="flex flex-col justify-center items-center">
                       <img
-                        src={`iconStack/${e.stack}.svg`}
+                        src={`${e.stack}.svg`}
                         alt={e.stack}
                         className="max-w-[75px] max-h-[75px]"
                       />
