@@ -14,7 +14,7 @@ export const projects = [
     stacksFe: ["JAVASCRIPT", "REACT", "REDUX"],
     stacksBe: ["JAVA", "SPRINGBOOT", "POSTGRESQL"],
     logo: null, // /nome.png
-    img: null, // /nome.png
+    img: "schedePG.png", // /nome.png
     descrizione:
       "Primo progetto full stack creato in totale autonomia: un sito che permette di creare in maniera autonoma e rapida personaggi per giocare al gioco di ruolo Dungeons & Dragons quinta edizione.",
   },
@@ -57,6 +57,7 @@ export const projects = [
     descrizione:
       "Clone del social media Linkedin scritto in collaborazione con colleghi del corso di Epicode. durante i lavori del progetto e fino alla consegna erano funzionanti anche pubblicazione post, commenti e like ai post e chat.",
   },
+  //! progetto da rifare
   {
     id: "Cinemille",
     name: "Cinemille",
@@ -66,7 +67,7 @@ export const projects = [
     stacksFe: ["JAVASCRIPT", "REACT", "SASS", "BOOTSTRAP"],
     stacksBe: ["JAVA", "SPRINGBOOT", "POSTGRESQL"],
     logo: null, // /nome.png
-    img: null, // /nome.png
+    img: "cineMille.jpg", // /nome.png
     descrizione:
       "Sito per la gestione di un cinema multisala nel quale è possibile aggiornare la programmazione tramite file csv.",
   },
