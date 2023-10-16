@@ -122,21 +122,21 @@ export default function AboutMe() {
               <div className="modal-body py-3">
                 <p className="pb-1">
                   Questa è la mia Alma mater, il Conservatorio di Salerno, dove
-                  mi sono laureato in "Musicologia" prima e in "Discipline
-                  storiche, critiche ed analitiche della musica" poi. La
-                  passione per la musica è qualcosa che mi ha contraddistinto
-                  per molti anni. Tuttavia, mentre la maggior parte degli amanti
-                  della musica percorre la strada della perfezione esecutiva, io
-                  ho scelto di fare qualcosa di diverso. Ho cercato di studiare
-                  e capire il fenomeno musicale in toto, come si è evoluto e
-                  perché in questo modo.
+                  mi sono laureato in &quot;Musicologia&quot; prima e in
+                  &quot;Discipline storiche, critiche ed analitiche della
+                  musica&quot; poi. La passione per la musica è qualcosa che mi
+                  ha contraddistinto per molti anni. Tuttavia, mentre la maggior
+                  parte degli amanti della musica percorre la strada della
+                  perfezione esecutiva, io ho scelto di fare qualcosa di
+                  diverso. Ho cercato di studiare e capire il fenomeno musicale
+                  in toto, come si è evoluto e perché in questo modo.
                 </p>
                 <p>
-                  Mi sono specializzato principalmente nell'analisi dei
+                  Mi sono specializzato principalmente nell&rsquo;analisi dei
                   repertori del XX secolo utilizzando una tecnica chiamata
-                  "Analisi insiemistica". Questa tecnica analitica utilizza
-                  nozioni matematiche per analizzare le partiture composte in
-                  base a regole matematiche e non solo.
+                  &quot;Analisi insiemistica&quot;. Questa tecnica analitica
+                  utilizza nozioni matematiche per analizzare le partiture
+                  composte in base a regole matematiche e non solo.
                 </p>
               </div>
 
@@ -222,9 +222,9 @@ export default function AboutMe() {
               <div className="modal-body py-3">
                 <p className="pb-1">
                   La passione per la lettura è una delle poche costanti nella
-                  mia vita, dall'età di circa 14 anni ho iniziato a leggere e
-                  nonostante anche lunghi periodi di pausa non ho mai smesso
-                  completamente.
+                  mia vita, dall&rsquo;età di circa 14 anni ho iniziato a
+                  leggere e nonostante anche lunghi periodi di pausa non ho mai
+                  smesso completamente.
                 </p>
                 <p>
                   Questa passione si è anche evoluta in qualche produzione
@@ -270,9 +270,9 @@ export default function AboutMe() {
                 <p className="pb-1">
                   Dungeons&Dragons è un gioco di ruolo, forse il più famoso, nel
                   quale si posso creare storie fantastiche e viverle
-                  impersonando personaggi immaginari. Da quando l'ho incontrato,
-                  in adolescenza, ne sono stato pienamente catturato tanto da
-                  farne il fulcro del progetto finale del corso di
+                  impersonando personaggi immaginari. Da quando l&rsquo;ho
+                  incontrato, in adolescenza, ne sono stato pienamente catturato
+                  tanto da farne il fulcro del progetto finale del corso di
                   programmazione che ho frequentato con Epicode.
                 </p>
                 <p>
@@ -324,9 +324,10 @@ export default function AboutMe() {
                   rilassarsi, per vivere avventure sempre nuove in mondi sempre
                   diversi. Di fatto investo ancora oggi una parte del mio tempo
                   libero in questa attività per me stimolante. La voglia di
-                  imparare a programmare è nata proprio con l'idea di capire
-                  come potesse essere possibile che delle "stringhe di codice"
-                  potessero rendere possibile tutto quello che vedo e faccio.
+                  imparare a programmare è nata proprio con l&rsquo;idea di
+                  capire come potesse essere possibile che delle &quot;stringhe
+                  di codice&quot; potessero rendere possibile tutto quello che
+                  vedo e faccio.
                 </p>
               </div>
 
