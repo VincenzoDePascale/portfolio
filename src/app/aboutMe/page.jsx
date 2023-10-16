@@ -77,31 +77,31 @@ export default function AboutMe() {
         </div>
         {/* box vita */}
         <div className="boxLife ms-2 mt-10 flex flex-col md:flex-row items-center">
-          <div className="md:w-4/12 text-center md:text-start">
+          <div className="md:w-4/12 text-center md:text-start mb-2 md:mb-0">
             La mia storia in un click:
           </div>
-          <div className="w-96 md:w-8/12 flex flex-row justify-between md:justify-around items-center">
-            <div onClick={openModalConSa} className="logos">
+          <div className="md:w-8/12 flex flex-col sm:flex-row md:justify-around">
+            <div onClick={openModalConSa} className="logos mb-2 md:mb-0">
               <img src="/ConSa.png" alt="logo Conservatorio di Salerno" />
             </div>
-            <div onClick={openModalEpicode} className="logos">
+            <div onClick={openModalEpicode} className="logos mb-2 md:mb-0">
               <img src="/Epicode.png" alt="logo Epicode" />
             </div>
           </div>
         </div>
         {/* box hobbies */}
         <div className="boxLife ms-2 mt-10 flex flex-col md:flex-row items-center">
-          <div className="md:w-4/12 text-center md:text-start">
+          <div className="md:w-4/12 text-center md:text-start mb-2 md:mb-0">
             I miei hobbies:
           </div>
-          <div className="w-96 md:w-8/12 flex flex-row justify-between md:justify-around items-center">
-            <div onClick={openModalBooks} className="logos">
+          <div className="md:w-8/12 flex flex-col sm:flex-row md:justify-between">
+            <div onClick={openModalBooks} className="logos mb-2 md:mb-0">
               <img src="/books.svg" alt="logo books" />
             </div>
-            <div onClick={openModalDnd} className="logos">
+            <div onClick={openModalDnd} className="logos mb-2 md:mb-0">
               <img src="/DND.svg" alt="logo D&D" />
             </div>
-            <div onClick={openModalGame} className="logos">
+            <div onClick={openModalGame} className="logos mb-2 md:mb-0">
               <img src="/Game.svg" alt="logo D&D" />
             </div>
           </div>
