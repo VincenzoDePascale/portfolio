@@ -96,7 +96,7 @@ export default function AboutMe() {
           </div>
           <div className="w-96 md:w-8/12 flex flex-row justify-between md:justify-around items-center">
             <div onClick={openModalBooks} className="logos">
-              <img src="/Books.svg" alt="logo books" />
+              <img src="/books.svg" alt="logo books" />
             </div>
             <div onClick={openModalDnd} className="logos">
               <img src="/DND.svg" alt="logo D&D" />
