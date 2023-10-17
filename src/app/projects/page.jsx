@@ -196,7 +196,7 @@ export default function Projects() {
                         >
                           <span className="md:hidden text-xs mr-3">demo</span>
                           <img
-                            src="/ONLINE.svg"
+                            src="ONLINE.svg"
                             alt={`link alsito di ${e.name}`}
                             className="max-w-[25px] max-h-[25px]"
                           />
