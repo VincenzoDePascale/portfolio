@@ -1,6 +1,18 @@
 "use client";
 import { useState } from "react";
+import Tooltip from "@mui/material/Tooltip";
 import "./page.css";
+
+export const lifeList = [
+  {
+    title: "titolo",
+    category: "categodia", //life - hobby
+    img: "/POSTMAN.svg", // "/nome.svg"
+    description: "descrizione",
+    buttonLink: "",
+    buttonName: "bottoneone",
+  },
+];
 
 export default function AboutMe() {
   // logica modale consa
@@ -8,6 +20,10 @@ export default function AboutMe() {
 
   const openModalConSa = () => {
     setIsModalConSaOpen(true);
+    setIsModalEpicodeOpen(false);
+    setIsModalBooksOpen(false);
+    setIsModalDndOpen(false);
+    setIsModalGameOpen(false);
   };
 
   const closeModalConSa = () => {
@@ -18,7 +34,11 @@ export default function AboutMe() {
   const [isModalEpicodeOpen, setIsModalEpicodeOpen] = useState(false);
 
   const openModalEpicode = () => {
+    setIsModalConSaOpen(false);
     setIsModalEpicodeOpen(true);
+    setIsModalBooksOpen(false);
+    setIsModalDndOpen(false);
+    setIsModalGameOpen(false);
   };
 
   const closeModalEpicode = () => {
@@ -29,7 +49,11 @@ export default function AboutMe() {
   const [isModalBooksOpen, setIsModalBooksOpen] = useState(false);
 
   const openModalBooks = () => {
+    setIsModalConSaOpen(false);
+    setIsModalEpicodeOpen(false);
     setIsModalBooksOpen(true);
+    setIsModalDndOpen(false);
+    setIsModalGameOpen(false);
   };
 
   const closeModalBooks = () => {
@@ -40,7 +64,11 @@ export default function AboutMe() {
   const [isModalDndOpen, setIsModalDndOpen] = useState(false);
 
   const openModalDnd = () => {
+    setIsModalConSaOpen(false);
+    setIsModalEpicodeOpen(false);
+    setIsModalBooksOpen(false);
     setIsModalDndOpen(true);
+    setIsModalGameOpen(false);
   };
 
   const closeModalDnd = () => {
@@ -51,6 +79,10 @@ export default function AboutMe() {
   const [isModalGameOpen, setIsModalGameOpen] = useState(false);
 
   const openModalGame = () => {
+    setIsModalConSaOpen(false);
+    setIsModalEpicodeOpen(false);
+    setIsModalBooksOpen(false);
+    setIsModalDndOpen(false);
     setIsModalGameOpen(true);
   };
 
@@ -60,49 +92,61 @@ export default function AboutMe() {
 
   return (
     <>
-      <div className="text-white box py-8 h-100">
-        <h2 className="text-xl font-semibold m-2">About Me</h2>
-        <div className="ms-2 mt-10">
-          <p className="text-lg">
-            Hello, I am Vincenzo, a passionate developer.
-          </p>
-          <p>I love technology, music, cinema, and video games.</p>
+      <div className="flex justify-center">
+        <div className="text-white box py-8 h-100 w-[1000px]">
+          <h2 className="text-xl font-semibold m-2">About Me</h2>
+          <div className="ms-2 mt-10">
+            <p className="text-lg">
+              Hello, I am Vincenzo, a passionate developer.
+            </p>
+            <p>I love technology, music, cinema, and video games.</p>
 
-          <p className="text-lg">
-            I dedicate myself to the best of my abilities in everything I do.
-          </p>
-          <p className="text-lg">
-            Feel free to explore my journey and get to know me better.
-          </p>
-        </div>
-        {/* box vita */}
-        <div className="boxLife ms-2 mt-10 flex flex-col md:flex-row items-center">
-          <div className="md:w-4/12 text-center md:text-start mb-2 md:mb-0">
-            La mia storia in un click:
+            <p className="text-lg">
+              I dedicate myself to the best of my abilities in everything I do.
+            </p>
+            <p className="text-lg">
+              Feel free to explore my journey and get to know me better.
+            </p>
           </div>
-          <div className="md:w-8/12 flex flex-col sm:flex-row md:justify-around">
-            <div onClick={openModalConSa} className="logos mb-2 md:mb-0">
-              <img src="/ConSa.png" alt="logo Conservatorio di Salerno" />
+          {/* box vita */}
+          <div className="boxLife ms-2 mt-10 flex flex-col md:flex-row items-center">
+            <div className="md:w-4/12 text-center md:text-start mb-2 md:mb-0 text-lg">
+              La mia storia in un click:
             </div>
-            <div onClick={openModalEpicode} className="logos mb-2 md:mb-0">
-              <img src="/Epicode.png" alt="logo Epicode" />
+            <div className="w-[100%] md:w-8/12 flex flex-col sm:flex-row justify-around items-center">
+              <div onClick={openModalConSa} className="logos mb-2 md:mb-0">
+                <Tooltip title="Conservatorio G.Martucci" placement="top">
+                  <img src="/ConSa.png" alt="logo Conservatorio di Salerno" />
+                </Tooltip>
+              </div>
+              <div onClick={openModalEpicode} className="logos mb-2 md:mb-0">
+                <Tooltip title="Epicode" placement="top">
+                  <img src="/Epicode.png" alt="logo Epicode" />
+                </Tooltip>
+              </div>
             </div>
           </div>
-        </div>
-        {/* box hobbies */}
-        <div className="boxLife ms-2 mt-10 flex flex-col md:flex-row items-center">
-          <div className="md:w-4/12 text-center md:text-start mb-2 md:mb-0">
-            I miei hobbies:
-          </div>
-          <div className="md:w-8/12 flex flex-col sm:flex-row md:justify-between">
-            <div onClick={openModalBooks} className="logos mb-2 md:mb-0">
-              <img src="/books.svg" alt="logo books" />
+          {/* box hobbies */}
+          <div className="boxLife ms-2 mt-10 flex flex-col md:flex-row items-center">
+            <div className="md:w-4/12 text-center md:text-start mb-2 md:mb-0">
+              I miei hobbies:
             </div>
-            <div onClick={openModalDnd} className="logos mb-2 md:mb-0">
-              <img src="/DND.svg" alt="logo D&D" />
-            </div>
-            <div onClick={openModalGame} className="logos mb-2 md:mb-0">
-              <img src="/Game.svg" alt="logo D&D" />
+            <div className="w-[100%] md:w-8/12 flex flex-col sm:flex-row justify-between items-center">
+              <div onClick={openModalBooks} className="logos mb-2 md:mb-0">
+                <Tooltip title="Libri" placement="top">
+                  <img src="/books.svg" alt="logo books" />
+                </Tooltip>
+              </div>
+              <div onClick={openModalDnd} className="logos mb-2 md:mb-0">
+                <Tooltip title="Dungeond&Dragons" placement="top">
+                  <img src="/DND.svg" alt="logo D&D" />
+                </Tooltip>
+              </div>
+              <div onClick={openModalGame} className="logos mb-2 md:mb-0">
+                <Tooltip title="Gaming" placement="top">
+                  <img src="/Game.svg" alt="logo gaming" />
+                </Tooltip>
+              </div>
             </div>
           </div>
         </div>
@@ -111,7 +155,7 @@ export default function AboutMe() {
       {/* MODALE CONSA */}
       {isModalConSaOpen && (
         <>
-          <div className="modal">
+          <div className="modal w-[100%] md:w-auto">
             <div className="modal-content">
               <div className="modal-header flex flex-row justify-between items-center">
                 <h3>Conservatorio G. Martucci</h3>
@@ -165,7 +209,7 @@ export default function AboutMe() {
       {/* MODALE Epicode */}
       {isModalEpicodeOpen && (
         <>
-          <div className="modal">
+          <div className="modal w-[100%] md:w-auto">
             <div className="modal-content">
               <div className="modal-header flex flex-row justify-between items-center">
                 <h3>Epicode</h3>
@@ -211,7 +255,7 @@ export default function AboutMe() {
       {/* MODALE Books */}
       {isModalBooksOpen && (
         <>
-          <div className="modal">
+          <div className="modal w-[100%] md:w-auto">
             <div className="modal-content">
               <div className="modal-header flex flex-row justify-between items-center">
                 <h3>Lettura</h3>
@@ -258,7 +302,7 @@ export default function AboutMe() {
       {/* MODALE Dnd */}
       {isModalDndOpen && (
         <>
-          <div className="modal">
+          <div className="modal w-[100%] md:w-auto">
             <div className="modal-content">
               <div className="modal-header flex flex-row justify-between items-center">
                 <h3>Dungeons&Dragons</h3>
@@ -308,7 +352,7 @@ export default function AboutMe() {
       {/* MODALE Game */}
       {isModalGameOpen && (
         <>
-          <div className="modal">
+          <div className="modal w-[100%] md:w-auto">
             <div className="modal-content">
               <div className="modal-header flex flex-row justify-between items-center">
                 <h3>Gaming</h3>

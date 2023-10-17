@@ -5,15 +5,22 @@
 }
 
 .modal {
-  padding: 1rem;
   border: 1px solid black;
   border-radius: 10px;
+  background-color: #333;
+
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1000;
-  background-color: #333;
+  max-height: 90%;
+  max-width: 100%;
+  overflow-y: auto;
+}
+
+.modal-content {
+  padding: 20px;
 }
 
 .logos {
@@ -22,7 +29,6 @@
   width: 150px;
   aspect-ratio: 5/4;
   padding: 1rem;
-  background: #666666;
   cursor: pointer;
   border-radius: 25px;
 }

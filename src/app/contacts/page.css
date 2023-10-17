@@ -4,6 +4,12 @@
   margin: 5px;
 }
 
+.labelBox {
+  background: #333;
+  border-radius: 5px;
+  margin: 5px;
+}
+
 .longness {
   flex: fit-content;
 }
@@ -12,33 +18,8 @@
   background-color: #fff;
 }
 
-@-webkit-keyframes slideIn {
-  0% {
-    transform: translateX(1200px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@-moz-keyframes slideIn {
-  0% {
-    transform: translateX(1200px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@keyframes slideIn {
-  0% {
-    transform: translateX(1200px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-.animation {
-  -webkit-animation: slideIn 2s forwards;
-  -moz-animation: slideIn 2s forwards;
-  animation: slideIn 2s forwards;
+.button {
+  margin-top: 0.25rem;
+  margin-inline-end: 0.25rem;
+  border: 1px solid white;
 }

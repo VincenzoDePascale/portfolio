@@ -22,6 +22,7 @@
     "moment": "^2.29.4",
     "next": "13.4.19",
     "react": "18.2.0",
+    "react-aria-modal": "^5.0.0",
     "react-bootstrap": "^2.8.0",
     "react-dom": "18.2.0",
     "react-tooltip": "^5.21.5"

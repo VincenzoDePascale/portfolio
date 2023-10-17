@@ -54,56 +54,58 @@ export default function ContactForm() {
   return (
     <>
       {alertMessage && <div className="alert">{alertMessage}</div>}
-      <h2 className="text-xl font-semibold m-2 text-center">Contact me</h2>
-      <form ref={form} onSubmit={sendEmail}>
-        <div className="flex items-center ">
-          <label className="w-[33%] lg:w-[20%]" htmlFor="name">
-            Name:
-          </label>
-          <input
-            className="bordBox w-[66%] lg:w-[80%] bgInnerText text-black"
-            type="text"
-            id="name"
-            name="user_name"
-            value={formData.user_name}
-            onChange={handleInputChange}
-            required
-          />
-        </div>
-        <div className="flex items-center">
-          <label className="w-[33%] lg:w-[20%]" htmlFor="email">
-            Email:
-          </label>
-          <input
-            className="bordBox w-[66%] lg:w-[80%] bgInnerText text-black"
-            type="email"
-            id="email"
-            name="user_email"
-            value={formData.user_email}
-            onChange={handleInputChange}
-            required
-          />
-        </div>
-        <div className="flex items-center">
-          <label className="w-[33%] lg:w-[20%]" htmlFor="message">
-            Message:
-          </label>
-          <textarea
-            className="bordBox w-[66%] lg:w-[80%] bgInnerText text-black"
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleInputChange}
-            required
-          />
-        </div>
-        <div className="flex flex-row-reverse">
-          <button
-            className="col w-[85px] px-2 py-1 mt-1 me-1 bordBox"
-            type="submit"
-          >
-            Send
-          </button>
+      <h2 className="text-xl font-semibold m-2 text-center flex justify-center">
+        Contact me
+      </h2>
+      <form
+        ref={form}
+        onSubmit={sendEmail}
+        className="max-w-[800px] m-auto md:py-5"
+      >
+        <div className="mx-5 flex flex-col justify-center">
+          <div className="labelBox flex flex-col mb-5">
+            <label htmlFor="name">Name:</label>
+            <input
+              className="bgInnerText text-black rounded"
+              type="text"
+              id="name"
+              name="user_name"
+              value={formData.user_name}
+              onChange={handleInputChange}
+              required
+            />
+          </div>
+          <div className="labelBox flex flex-col mb-5">
+            <label htmlFor="email">Email:</label>
+            <input
+              className="bgInnerText text-black rounded"
+              type="email"
+              id="email"
+              name="user_email"
+              value={formData.user_email}
+              onChange={handleInputChange}
+              required
+            />
+          </div>
+          <div className="labelBox flex flex-col mb-5">
+            <label htmlFor="message">Message:</label>
+            <textarea
+              className="bgInnerText text-black rounded"
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleInputChange}
+              required
+            />
+          </div>
+          <div className="flex flex-row-reverse pt-5">
+            <button
+              className="button col w-[85px] px-2 py-1 bordBox"
+              type="submit"
+            >
+              Send
+            </button>
+          </div>
         </div>
       </form>
     </>

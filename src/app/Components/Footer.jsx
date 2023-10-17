@@ -5,7 +5,7 @@ export default function Footer() {
 
   return (
     <>
-      <div className="footer-container text-xs">
+      <div className="footer-container text-xs md:fixed md:bottom-0 md:right-0">
         <div>&copy; {currentYear} Vincenzo De Pascale</div>
       </div>
     </>

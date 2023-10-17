@@ -6,16 +6,16 @@ import ContactForm from "./ContactForm";
 export default function Contacts() {
   return (
     <>
-      <div className="text-white box">
+      <div className="text-white box md:mt-[100px]">
         <div className="container mx-auto">
           <h2 className="text-2xl font-semibold mb-4">Contatti Utili</h2>
 
-          <div className="flex flex-col md:flex-row">
-            <div className="flex flex-col">
+          <div className="flex flex-col">
+            <div className="flex flex-row justify-around bordBox">
               <a
                 href="https://www.linkedin.com/in/vincenzo-de-pascale-30542322a/"
                 target="_blank"
-                className="bordBox p-4 rounded shadow md:col-start-1 flex items-center"
+                className="p-4 flex items-center justify-center"
               >
                 <div>
                   <span>
@@ -35,16 +35,15 @@ export default function Contacts() {
                     </svg>
                   </span>
                 </div>
-                <div className="ml-4 truncate ...">
-                  <h3 className="text-lg font-semibold mb-2">Linkedin:</h3>
-                  <p>Vincenzo De Pascale</p>
+                <div className="hidden md:block ml-4 truncate ...">
+                  Linkedin
                 </div>
               </a>
 
               <a
                 href="https://github.com/VincenzoDePascale"
                 target="_blank"
-                className="bordBox p-4 rounded shadow md:col-start-1 flex items-center"
+                className="p-4 flex items-center"
               >
                 <div>
                   <span>
@@ -63,16 +62,15 @@ export default function Contacts() {
                     </svg>
                   </span>
                 </div>
-                <div className="ml-4 truncate ...">
-                  <h3 className="text-lg font-semibold mb-2">GitHub:</h3>
-                  <p>Vincenzo De Pascale</p>
+                <div className="hidden md:block ml-4 pt-1 truncate ...">
+                  GitHub
                 </div>
               </a>
 
               <a
                 href="https://www.google.com/maps?q=Pagani,SA"
                 target="_blank"
-                className="bordBox p-4 rounded shadow md:col-start-1 flex items-center"
+                className="p-4 flex items-center"
               >
                 <div>
                   <span>
@@ -87,16 +85,15 @@ export default function Contacts() {
                     </svg>
                   </span>
                 </div>
-                <div className="ml-4 truncate ...">
-                  <h3 className="text-lg font-semibold mb-2">Location:</h3>
-                  <p>Pagani (SA)</p>
+                <div className="hidden md:block ml-4 truncate ...">
+                  Pagani (SA)
                 </div>
               </a>
             </div>
 
             <div className="flex longness">
               {/* mail box */}
-              <div className="flex-col basis-full bordBox p-4 w-100">
+              <div className="flex-col items-center basis-full bordBox p-4 w-100">
                 <ContactForm />
               </div>
             </div>
