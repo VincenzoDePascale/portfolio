@@ -5,11 +5,7 @@
   width: 100%;
   padding: 5px;
   color: #fff;
-  background: linear-gradient(
-    135deg,
-    #000,
-    #333
-  ); /* Fondo trasparente con opacità 0.5 */
+  background: linear-gradient(135deg, #000, #333);
   z-index: 1000;
 }
 
@@ -19,4 +15,16 @@
 
 .navbar a {
   color: #fff;
+}
+
+.menuSm {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #333, #000);
+  position: absolute;
+  border: 1px solid #333;
+  border-radius: 25px;
+  top: 0;
+  right: 0;
+  margin: 40px 0 0 0;
+  min-width: 140px;
 }

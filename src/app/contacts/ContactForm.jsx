@@ -60,7 +60,7 @@ export default function ContactForm() {
       <form
         ref={form}
         onSubmit={sendEmail}
-        className="max-w-[800px] m-auto md:py-5"
+        className="md:max-w-[800px] md:m-auto md:py-5"
       >
         <div className="mx-5 flex flex-col justify-center">
           <div className="labelBox flex flex-col mb-5">

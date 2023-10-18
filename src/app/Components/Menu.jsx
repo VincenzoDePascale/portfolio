@@ -113,11 +113,7 @@ export default function Menu() {
             )}
 
             {/* Sidebar */}
-            <div
-              className={`${
-                !toggle ? "hidden" : "flex"
-              } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar bg-[#333]`}
-            >
+            <div className={`${!toggle ? "hidden" : "flex"} menuSm sidebar`}>
               <ul className="list-none flex justify-end items-start flex-1 flex-col">
                 {navLinks.map((e, i) => (
                   <li

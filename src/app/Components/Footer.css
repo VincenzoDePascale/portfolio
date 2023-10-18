@@ -6,4 +6,5 @@
   text-align: end;
   color: #fff;
   padding: 10px;
+  z-index: -1;
 }

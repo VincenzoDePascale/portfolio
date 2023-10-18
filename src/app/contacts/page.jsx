@@ -93,7 +93,7 @@ export default function Contacts() {
 
             <div className="flex longness">
               {/* mail box */}
-              <div className="flex-col items-center basis-full bordBox p-4 w-100">
+              <div className="flex-col items-center basis-full bordBox p-4">
                 <ContactForm />
               </div>
             </div>

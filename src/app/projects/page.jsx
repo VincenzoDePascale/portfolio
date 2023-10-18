@@ -146,7 +146,7 @@ export default function Projects() {
                       />
                     )}
                     <div className="pb-2 flex flex-col md:items-start justify-around">
-                      <div className="flex flex-col md:flex-row items-center justify-around">
+                      <div className="w-100 flex flex-col lg:flex-row items-center justify-around">
                         <span className="text-2xl">{e.name}</span>
                         <span className="flex flex-row ms-3">
                           <span className="flex flex-row">
