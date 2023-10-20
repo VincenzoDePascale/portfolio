@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
 import { useRef } from "react";
 import "./page.css";
-import ContactForm from "./ContactForm";
 
 export default function Contacts() {
   const form = useRef();
