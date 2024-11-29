@@ -11,11 +11,6 @@ export const navLinks = [
     href: "/",
   },
   {
-    id: "aboutMe",
-    title: "About Me",
-    href: "/aboutMe",
-  },
-  {
     id: "projects",
     title: "Projects",
     href: "/projects",
